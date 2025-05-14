@@ -1,23 +1,25 @@
 ---
-title: About
-description: 'Hugo, the world''s fastest framework for building websites'
-author: Hugo Authors
+title: "About Me"
+toc: false
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hi, I’m Jacob Case. I am an engineering leader and product manager with a passion for building high-impact products at the intersection of hardware and software.
 
-Hugo makes use of a variety of open source projects including:
+Over the past several years, I’ve led cross-functional teams in the design, development, and delivery of embedded systems, connected devices, and full-stack software applications. My experience ranges from architecting embedded Linux platforms and IoT solutions to managing product roadmaps and driving agile development cycles from prototype to production.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+As a product-driven engineer, I thrive on solving complex technical challenges while ensuring that business and user needs are met. I enjoy working closely with engineering, design, and business stakeholders to align vision with execution.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+My work philosophy is simple: build products that solve real problems, deliver measurable value, and create a positive experience for the end user.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+In my spare time, I enjoy developing personal side projects including mobile apps, hardware dashboards, and custom tools for improving productivity and learning.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+**Core skills include:**
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- Embedded systems architecture
+- Mobile application development (iOS)
+- Product lifecycle management
+- Cross-functional team leadership
+- Agile methodologies
+- System integration and testing
+
+If you’re interested in collaborating or want to learn more about my work, feel free to explore my [Projects](/projects/) or [Contact me](/contact/).
