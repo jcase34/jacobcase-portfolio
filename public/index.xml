@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Awesome Hugo blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Home on Awesome Hugo blog</description>
+    <title>Home on Jacob Case</title>
+    <link>http://localhost:50261/</link>
+    <description>Recent content in Home on Jacob Case</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:50261/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cappriccio: Piano Practice Manager for iOS</title>
+      <link>http://localhost:50261/projects/piano-practice-app/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:50261/projects/piano-practice-app/</guid>
+      
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:50261/images/cappriccio-screenshot.jpg&#34; alt=&#34;Cappriccio App Screenshot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cappriccio&lt;/strong&gt; is an iOS app I designed and developed to help piano players structure and track their daily practice sessions for maximum improvement.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem&#34;&gt;📝 Problem&lt;/h2&gt;
+&lt;p&gt;Most musicians, including myself, struggle with keeping track of their practice time, goals, and areas to improve. I wanted to create a tool that provides structure and history without getting in the way of the music.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-my-role&#34;&gt;💡 My Role&lt;/h2&gt;
+&lt;p&gt;I designed, built, and iterated the full product:&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Table of content</title>
-      <link>http://localhost:1313/posts/table-of-content/</link>
+      <link>http://localhost:50261/posts/table-of-content/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/table-of-content/</guid>
+      <guid>http://localhost:50261/posts/table-of-content/</guid>
       
       <description>&lt;h2 id=&#34;table-of-content&#34;&gt;Table of content&lt;/h2&gt;
 &lt;p&gt;This theme supports displaying table of content (ToC) in blog posts.&lt;/p&gt;
@@ -33,10 +51,10 @@
     
     <item>
       <title>Math Typesetting - use Mathematical notation in blog posts</title>
-      <link>http://localhost:1313/posts/math-typesetting/</link>
+      <link>http://localhost:50261/posts/math-typesetting/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/math-typesetting/</guid>
+      <guid>http://localhost:50261/posts/math-typesetting/</guid>
       
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using
 &lt;a href=&#34;https://github.com/hugo-sid/hugo-blog-awesome/blob/main/layouts/partials/helpers/katex.html&#34;&gt;third party JavaScript libraries&lt;/a&gt;.&lt;/p&gt;</description>
@@ -45,10 +63,10 @@
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>http://localhost:1313/posts/markdown-syntax/</link>
+      <link>http://localhost:50261/posts/markdown-syntax/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
+      <guid>http://localhost:50261/posts/markdown-syntax/</guid>
       
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
       
@@ -56,10 +74,10 @@
     
     <item>
       <title>Rich Content</title>
-      <link>http://localhost:1313/posts/rich-content/</link>
+      <link>http://localhost:50261/posts/rich-content/</link>
       <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/rich-content/</guid>
+      <guid>http://localhost:50261/posts/rich-content/</guid>
       
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
       
@@ -67,10 +85,10 @@
     
     <item>
       <title>Placeholder Text</title>
-      <link>http://localhost:1313/posts/placeholder-text/</link>
+      <link>http://localhost:50261/posts/placeholder-text/</link>
       <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/placeholder-text/</guid>
+      <guid>http://localhost:50261/posts/placeholder-text/</guid>
       
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
       
@@ -78,10 +96,10 @@
     
     <item>
       <title>Emoji Support</title>
-      <link>http://localhost:1313/posts/emoji-support/</link>
+      <link>http://localhost:50261/posts/emoji-support/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/emoji-support/</guid>
+      <guid>http://localhost:50261/posts/emoji-support/</guid>
       
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
       
@@ -89,10 +107,10 @@
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/pages/about/</link>
+      <link>http://localhost:50261/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/pages/about/</guid>
+      <guid>http://localhost:50261/pages/about/</guid>
       
       <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;&gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;

@@ -89,6 +89,7 @@ theme = "hugo-blog-awesome"
   toc = true # set to false to disable table of contents 'globally'
   tocOpen = false # set to true to open table of contents by default
   goToTop = true # set to false to disable 'go to top' button
+
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
   # Your custom scripts will be concatenated to one file `custom.js`.
@@ -101,12 +102,15 @@ theme = "hugo-blog-awesome"
   # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
   # By default (or if nothing is specified), summary is used.
 
+
+
 [Languages.en-gb.params.author]
   avatar = "profile.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Jacob Case"
   name = "Jacob Case"
   description = "Software Engineer and Product Manager"
+
 
 # Allow to override webmanifest options
 [Languages.en-gb.params.webmanifest]
