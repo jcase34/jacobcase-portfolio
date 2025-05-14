@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">TrashMapper - iOS Project - Development - Part4 | Jacob Case</title>
+<meta property="og:title" content="TrashMapper - iOS Project - Development - Part4 | Jacob Case" />
+<meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part4 | Jacob Case" />
+<meta itemprop="name" content="TrashMapper - iOS Project - Development - Part4 | Jacob Case" />
+<meta name="application-name" content="TrashMapper - iOS Project - Development - Part4 | Jacob Case" />
+<meta property="og:site_name" content="Jacob Case" />
+
+<meta name="description" content="Get User Location and Tag Location View Added.">
+<meta itemprop="description" content="Get User Location and Tag Location View Added." />
+<meta property="og:description" content="Get User Location and Tag Location View Added." />
+<meta name="twitter:description" content="Get User Location and Tag Location View Added." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part4/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-05-26T00:00:00Z />
+    <meta property="article:published_time" content=2022-05-26T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part4/" />
+
+    
+    <meta property="og:article:author" content="Jacob Case" />
+    <meta property="article:author" content="Jacob Case" />
+    <meta name="author" content="Jacob Case" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "TrashMapper - iOS Project - Development - Part4",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-05-26",
+        "description": "Get User Location and Tag Location View Added.",
+        "wordCount":  254 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-05-26",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Jacob Case"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.3">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part4/">
+  <meta property="og:site_name" content="Jacob Case">
+  <meta property="og:title" content="TrashMapper - iOS Project - Development - Part4">
+  <meta property="og:description" content="Get User Location and Tag Location View Added.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-05-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-05-26T00:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="UIKit">
+    <meta property="article:tag" content="CoreLocation">
+    <meta property="article:tag" content="Firebase">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part4">
+  <meta name="twitter:description" content="Get User Location and Tag Location View Added.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part4/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">TrashMapper - iOS Project - Development - Part4</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-05-26T00:00:00&#43;00:00" itemprop="datePublished"> 26 May 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#updates">Updates</a></li>
+    <li><a href="#updates-to-views">Updates to Views</a></li>
+    <li><a href="#testing-zoom-on-user-and-navigation-to-tag-location">Testing Zoom on User and Navigation to Tag Location</a>
+      <ul>
+        <li><a href="#zooming-on-user">Zooming on user</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="updates">Updates</h2>
+<p>Few more updates added&hellip;</p>
+<ol>
+<li>
+<p>Outline functionality for:</p>
+<ul>
+<li>CLLocation Manager &amp; related delegates
+<ul>
+<li>Mostly complete, major functionality included</li>
+</ul>
+</li>
+<li>Camera usability, storing current photo</li>
+<li>Paths to photos, storage URL, etc</li>
+<li>userPost Object and related methods</li>
+<li>userPost structs and definitions</li>
+<li>Firebase cocoa pod integration
+<ul>
+<li>Added, no analytics included for now. May integrate later</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Build out the User Interface</p>
+<ul>
+<li>Add Apple Mapkit
+<ul>
+<li>Added to unique view controller with tab</li>
+<li>Needs constraints on the view/tab</li>
+<li>Added in get user location button
+<ul>
+<li>Function to zoom on user added</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add tableBar with tableView, MapView, userProfile buttons
+<ul>
+<li>In progress, two tab bars included</li>
+<li>May not do the tableView for initial release</li>
+</ul>
+</li>
+<li>Add getUserLocation button
+<ul>
+<li>Tag location view added with basic information
+<ul>
+<li>Longitude</li>
+<li>Latitude</li>
+<li>Description</li>
+<li>Button for Image Picker</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add addPost button</li>
+</ul>
+</li>
+</ol>
+<h2 id="updates-to-views">Updates to Views</h2>
+<p><img src="/posts/papermod/images/TrashMapper/28May2022ViewFlow.png" alt="map"></p>
+<h2 id="testing-zoom-on-user-and-navigation-to-tag-location">Testing Zoom on User and Navigation to Tag Location</h2>
+<figure><img src="/posts/papermod/images/TrashMapper/28May2022ViewFlow.gif" width="300" height="600">
+</figure>
+
+<h3 id="zooming-on-user">Zooming on user</h3>
+<p>To zoom in on the user, we first define a region with <code>struct MKCoordinateRegion</code> with initializer:</p>
+<pre tabindex="0"><code>init(center: CLLocationCoordinate2D, latitudinalMeters: CLLocationDistance, longitudinalMeters: CLLocationDistance)
+</code></pre><p>The CLLLocationCoordinate2D can be pulled from the mapview to point at user position.</p>
+<p>Wrap this into a function and add an IBAction from the Arrow button so that it implies &ldquo;zoom to user location&rdquo;, similar to how Google maps does it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">getUserLocation</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//create a region to zoom on</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nv">region</span> <span class="p">=</span> <span class="n">MKCoordinateRegion</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">center</span><span class="p">:</span> <span class="n">mapView</span><span class="p">.</span><span class="n">userLocation</span><span class="p">.</span><span class="n">coordinate</span><span class="p">,</span> <span class="c1">//grab user coordinate</span>
+</span></span><span class="line"><span class="cl">    <span class="n">latitudinalMeters</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>                 <span class="c1">//lat span</span>
+</span></span><span class="line"><span class="cl">    <span class="n">longitudinalMeters</span><span class="p">:</span> <span class="mi">1000</span><span class="p">)</span>                <span class="c1">//long span</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//Change to the region provided within this method</span>
+</span></span><span class="line"><span class="cl">  <span class="n">mapView</span><span class="p">.</span><span class="n">setRegion</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//adjust the region with proper aspect ratios and centerpoint</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mapView</span><span class="p">.</span><span class="n">regionThatFits</span><span class="p">(</span><span class="n">region</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+  <small class="footer_copyright">
+    © 2025 Jacob Case. All rights reserved.
+  </small>
+</footer>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

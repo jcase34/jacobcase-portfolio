@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Annotations on Jacob Case</title>
+    <link>http://localhost:1313/tags/annotations/</link>
+    <description>Recent content in Annotations on Jacob Case</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 13 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/annotations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part8</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;In the last post, I mainly focused on the CreatePostViewController and made some minor tweaks to help user experience.&lt;/p&gt;
+&lt;p&gt;Prior to that were some discussions around Firebase, postModel, and annotations.&lt;/p&gt;
+&lt;p&gt;In this post I&amp;rsquo;m going to focus on map annotations and see if I can nail down a customized annotation object and view to display on the map.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;adding-map-annotations&#34;&gt;Adding Map Annotations&lt;/h3&gt;
+&lt;p&gt;The intention is to create custom annotations/views for all user submitted posts once this app is up and running.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part9</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</guid>
+      
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In this post I want explore the option of using both CoreData and Firebase and performing a sync between them. Early in the brainstorming stages I brought up this topic but dismissed it due to some research around FireBase FireStore and ability to handle storing data offline and then syncing when service is available.&lt;/p&gt;
+&lt;p&gt;Doing some reading on StackOverFlow, it sounds like it&amp;rsquo;s always preferred to have a single database managing both on and offline content. There are cases (&lt;a href=&#34;https://stackoverflow.com/questions/45558384/firebase-database-local-storage&#34;&gt;example&lt;/a&gt;) where existing apps use both CoreData and Firebase realtime DB and storage and it works well.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

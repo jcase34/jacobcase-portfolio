@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on Jacob Case</title>
+    <link>http://localhost:1313/tags/project/</link>
+    <description>Recent content in Project on Jacob Case</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 13 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part8</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;In the last post, I mainly focused on the CreatePostViewController and made some minor tweaks to help user experience.&lt;/p&gt;
+&lt;p&gt;Prior to that were some discussions around Firebase, postModel, and annotations.&lt;/p&gt;
+&lt;p&gt;In this post I&amp;rsquo;m going to focus on map annotations and see if I can nail down a customized annotation object and view to display on the map.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;adding-map-annotations&#34;&gt;Adding Map Annotations&lt;/h3&gt;
+&lt;p&gt;The intention is to create custom annotations/views for all user submitted posts once this app is up and running.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part9</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</guid>
+      
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In this post I want explore the option of using both CoreData and Firebase and performing a sync between them. Early in the brainstorming stages I brought up this topic but dismissed it due to some research around FireBase FireStore and ability to handle storing data offline and then syncing when service is available.&lt;/p&gt;
+&lt;p&gt;Doing some reading on StackOverFlow, it sounds like it&amp;rsquo;s always preferred to have a single database managing both on and offline content. There are cases (&lt;a href=&#34;https://stackoverflow.com/questions/45558384/firebase-database-local-storage&#34;&gt;example&lt;/a&gt;) where existing apps use both CoreData and Firebase realtime DB and storage and it works well.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part7</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part7/trashmapper-project-development-part7/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part7/trashmapper-project-development-part7/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Made some additional updates to the CreatePostViewController.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keyboard now dismisses when the user taps away from the UITextFieldView&lt;/li&gt;
+&lt;li&gt;A character counter is visible on the UITextField view and limits the character count to 100
+&lt;ul&gt;
+&lt;li&gt;May reduce to keep descriptions short&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Date formatter no longer adds a time in, only the month, day, year.&lt;/li&gt;
+&lt;li&gt;Fill in UITextField with placeholder text. When tapped, change the font color to black clear text view.
+&lt;ul&gt;
+&lt;li&gt;If no text entered, and user tapped away, refill with placeholder text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added a constants file to prevent file depending naming/values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;code-for-createpostviewcontroller&#34;&gt;Code for CreatePostViewController&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//  CreatePostViewController.swift&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//  TrashMapper&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//  Created by Jacob Case on 5/28/22.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;UIKit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CoreLocation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MapKit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Create outside viewController class to only instantiate a single formatter to be used everytime&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;dateFormatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DateFormatter&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;formatter&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DateFormatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;formatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dateStyle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;medium&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;formatter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CreatePostViewController&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UITableViewController&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//outlets for main screen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;weak&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;addPhotoButton&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIButton&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;weak&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;descriptionTextView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UITextView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;weak&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;dateLabel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UILabel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;weak&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;numCharsLeft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UILabel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//grab junk photo for demonstration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;bundleImage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIImage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIImage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;named&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;trash_in_park.jpg&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//image variable for picker and delegates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIImage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//variable for segue data transfer, test post&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;coordinate&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CLLocationCoordinate2D&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;latitude&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;longitude&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;override&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kc&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// Do any additional setup after loading the view.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//create gesture recognizer for tap outside of UITextView&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;gestureRecognizer&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UITapGestureRecognizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;#selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hideKeyboard&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;gestureRecognizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cancelsTouchesInView&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;tableView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;addGestureRecognizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gestureRecognizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//Load information for a bogus/test location&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;dateLabel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//UITextView Setup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;descriptionTextView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;K&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;descriptionTextFieldText&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;descriptionTextView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;textColor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lightGray&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//Delegate assignments&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;descriptionTextView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delegate&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;self&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//max char length allowed for description text&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;numCharsLeft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;K&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;numCharsLeft&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//ISSUE - addPhotoButton.addDashedBorder() does not work, doesn&amp;#39;t cover entire frame.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//addPhotoButton.addDashedBorder()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//ToDo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//App Looks better in white for demonstration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//Update later with custom Xibs, colors, etc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;override&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;viewWillAppear&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;animated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Bool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kc&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;viewWillAppear&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;animated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;navigationController&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;?.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isNavigationBarHidden&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;navigationItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;K&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;createPostViewTitle&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Helper methods to setup the date formatter and dismissal of keyboard.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part6</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Most of the work I&amp;rsquo;ve been putting into the app recently has been around Firebase and MKAnnotation views for the map.&lt;/p&gt;
+&lt;p&gt;Learning about Firebase has certainly been a process. Different stacks to choose from (i.e storage, realtime db, firestore), but feel like I&amp;rsquo;m closing in on a good solution. Will cover some of the topics today.&lt;/p&gt;
+&lt;p&gt;As for the MKAnnotations, I spent a few hours today playing around with different ways to display an annotation view, thinking about the best way to structure my annotations given my Firebase utility and so on.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part5</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Whew, what a day it has been! I spent a solid 5-6 hours reviewing the outline of this application. Flow, navigation, controller setup, all went through some more thought and comparison of projects online.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s go ahead and dive into some of the changes.&lt;/p&gt;
+&lt;p&gt;Also to note - I&amp;rsquo;m currently working from the develop branch of this project. I plan to create separate branches for camera functionality, firebase, and others moving forward.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part3</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;This post will be brief but cover some key points moving forward in this project.&lt;/p&gt;
+&lt;p&gt;From my previous post outlining some key steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates
+&lt;ul&gt;
+&lt;li&gt;Mostly complete, major functionality included&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration
+&lt;ul&gt;
+&lt;li&gt;Added, no analytics included for now. May integrate later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part4</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Few more updates added&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates
+&lt;ul&gt;
+&lt;li&gt;Mostly complete, major functionality included&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration
+&lt;ul&gt;
+&lt;li&gt;Added, no analytics included for now. May integrate later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Apple Mapkit
+&lt;ul&gt;
+&lt;li&gt;Added to unique view controller with tab&lt;/li&gt;
+&lt;li&gt;Needs constraints on the view/tab&lt;/li&gt;
+&lt;li&gt;Added in get user location button
+&lt;ul&gt;
+&lt;li&gt;Function to zoom on user added&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add tableBar with tableView, MapView, userProfile buttons
+&lt;ul&gt;
+&lt;li&gt;In progress, two tab bars included&lt;/li&gt;
+&lt;li&gt;May not do the tableView for initial release&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add getUserLocation button
+&lt;ul&gt;
+&lt;li&gt;Tag location view added with basic information
+&lt;ul&gt;
+&lt;li&gt;Longitude&lt;/li&gt;
+&lt;li&gt;Latitude&lt;/li&gt;
+&lt;li&gt;Description&lt;/li&gt;
+&lt;li&gt;Button for Image Picker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add addPost button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;updates-to-views&#34;&gt;Updates to Views&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - CoreLocation - Part2</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</guid>
+      
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In the last post, I was able to tap a button on screen and begin collecting location data. I also had a stop button that would invoke &lt;code&gt;stopLocationManager()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Within this post I&amp;rsquo;ll cover updates to the &lt;code&gt;getLocation()&lt;/code&gt; method, merging of start/stop updating location button, and bounding how long we search for new locations based on some tools that Apple provides us.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;location-change--updating&#34;&gt;Location Change &amp;amp; Updating&lt;/h2&gt;
+&lt;p&gt;Here I show that the start and stop button merged into a single button. The title of the button updates as we begin searching for current location.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - CoreLocation - Part1</title>
+      <link>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</guid>
+      
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In my previous post I had created a list of to-do items. Normally you&amp;rsquo;d see these broken out in some Trello board. I may migrate to that once I make more headway but for now doing it in this fashion.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates &amp;mdash;&amp;ndash;&amp;gt; In progress&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Concept/Sketch</title>
+      <link>http://localhost:1313/posts/trashmapper-concept/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-concept/</guid>
+      
+      <description>&lt;p&gt;In this post I will go over the layout of the app.&lt;/p&gt;
+&lt;p&gt;I decided to hand sketch since it&amp;rsquo;s the easiest way to peel ideas from my head. I eventually want to use &lt;a href=&#34;https://www.figma.com/files/recent?fuid=1063954858343816564&#34;&gt;Figma&lt;/a&gt; to model the app before diving into code. There is some learning and patience involved with sketching through Figma which is while I&amp;rsquo;m avoiding it for the time being. I&amp;rsquo;d prefer to focus more on the code, implementation, and playing around with ideas.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Features</title>
+      <link>http://localhost:1313/posts/trashmapper-project-features/trashmapper-project-features/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-project-features/trashmapper-project-features/</guid>
+      
+      <description>&lt;p&gt;I had started learning from &lt;a href=&#34;https://www.hackingwithswift.com&#34;&gt;www.hackingwithswift.com&lt;/a&gt; back in February and made it about half way through the &amp;ldquo;100 Days of Swift&amp;rdquo;. One of the projects at that time required integrating Apple&amp;rsquo;s Mapkit and assigning info points on certain coordinates.&lt;/p&gt;
+&lt;p&gt;While completing that project I tried to think of applications that would be interesting to make outside of what&amp;rsquo;s available today. One that came to mind was tagging areas where there are large amounts of litter or garbage. A step further would be a crowd-sourced application where many people contribute to tagging locations on a map, coordinating clean-up groups, and even showing them on the map real-time.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

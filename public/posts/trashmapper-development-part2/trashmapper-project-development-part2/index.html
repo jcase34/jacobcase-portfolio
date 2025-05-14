@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">TrashMapper - iOS Project - CoreLocation - Part2 | Jacob Case</title>
+<meta property="og:title" content="TrashMapper - iOS Project - CoreLocation - Part2 | Jacob Case" />
+<meta name="twitter:title" content="TrashMapper - iOS Project - CoreLocation - Part2 | Jacob Case" />
+<meta itemprop="name" content="TrashMapper - iOS Project - CoreLocation - Part2 | Jacob Case" />
+<meta name="application-name" content="TrashMapper - iOS Project - CoreLocation - Part2 | Jacob Case" />
+<meta property="og:site_name" content="Jacob Case" />
+
+<meta name="description" content="Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button">
+<meta itemprop="description" content="Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button" />
+<meta property="og:description" content="Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button" />
+<meta name="twitter:description" content="Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-05-25T00:00:00Z />
+    <meta property="article:published_time" content=2022-05-25T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/" />
+
+    
+    <meta property="og:article:author" content="Jacob Case" />
+    <meta property="article:author" content="Jacob Case" />
+    <meta name="author" content="Jacob Case" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "TrashMapper - iOS Project - CoreLocation - Part2",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-05-25",
+        "description": "Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button",
+        "wordCount":  514 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-05-25",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Jacob Case"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.3">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/">
+  <meta property="og:site_name" content="Jacob Case">
+  <meta property="og:title" content="TrashMapper - iOS Project - CoreLocation - Part2">
+  <meta property="og:description" content="Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-05-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-05-25T00:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="UIKit">
+    <meta property="article:tag" content="CoreLocation">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrashMapper - iOS Project - CoreLocation - Part2">
+  <meta name="twitter:description" content="Incorporate accuracy checks with core location, TimeOuts for no location found, integrate start/stop location into single button">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">TrashMapper - iOS Project - CoreLocation - Part2</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-05-25T00:00:00&#43;00:00" itemprop="datePublished"> 25 May 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#location-change--updating">Location Change &amp; Updating</a></li>
+    <li><a href="#timeout-for-unknown-location">Timeout for Unknown Location</a></li>
+    <li><a href="#stop-updating-with-no-location-change">Stop Updating with No Location Change</a></li>
+    <li><a href="#next-steps">Next Steps</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="motivation">Motivation</h2>
+<p>In the last post, I was able to tap a button on screen and begin collecting location data. I also had a stop button that would invoke <code>stopLocationManager()</code>.</p>
+<p>Within this post I&rsquo;ll cover updates to the <code>getLocation()</code> method, merging of start/stop updating location button, and bounding how long we search for new locations based on some tools that Apple provides us.</p>
+<hr>
+<h2 id="location-change--updating">Location Change &amp; Updating</h2>
+<p>Here I show that the start and stop button merged into a single button. The title of the button updates as we begin searching for current location.</p>
+<p>I initially set the location &ldquo;None&rdquo; as provided Xcode Simulator. I then changed the location to &ldquo;Apple&rdquo; and it began updating with the headquarters coordinates. This is good and shows that the app will wait until there is a valid location before it begins updating.</p>
+<p><img src="/posts/papermod/images/TrashMapper/StartandStopMerged.gif" alt="post"></p>
+<h2 id="timeout-for-unknown-location">Timeout for Unknown Location</h2>
+<p>Although the core location service waits for a valid location, this can be a problem. If a valid location is never found, core location will continue searching forever. For this reason a 30second timer is implemented in startLocationManager() and will call didTimeOut() method. This will then call stopLocationManager() and throw a customized NSError object to locationError variable.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">startLocationManager</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">CLLocationManager</span><span class="p">.</span><span class="n">locationServicesEnabled</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationManager</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationManager</span><span class="p">.</span><span class="n">desiredAccuracy</span> <span class="p">=</span> <span class="n">kCLLocationAccuracyNearestTenMeters</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationManager</span><span class="p">.</span><span class="n">startUpdatingLocation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">updatingLocation</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">timer</span> <span class="p">=</span> <span class="n">Timer</span><span class="p">.</span><span class="n">scheduledTimer</span><span class="p">(</span><span class="n">timeInterval</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="kc">self</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">didTimeOut</span><span class="p">),</span> <span class="n">userInfo</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">repeats</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">didTimeOut</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;***Time Out***&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">location</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stopLocationManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationError</span> <span class="p">=</span> <span class="n">NSError</span><span class="p">(</span><span class="n">domain</span><span class="p">:</span> <span class="s">&#34;MyLocationsErrorDomain&#34;</span><span class="p">,</span> <span class="n">code</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">userInfo</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getStatus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>It&rsquo;s helpful to see how to build a custom NSError with domain name, code, and userinfo.</p>
+<h2 id="stop-updating-with-no-location-change">Stop Updating with No Location Change</h2>
+<p>On top of incorporating a timer, I&rsquo;ve also made changes to how often the location updates based on current vs new locations.</p>
+<p>In this case, we check if locations are older than 5 seconds. If so, we ignore them. I also check the horizontal accuracy and if it&rsquo;s less than 0 (invalid) it&rsquo;s ignored.</p>
+<p>If we don&rsquo;t have a location, then use last good known location or if the horizontal accuracy of current location is worse than new location, swap the two.</p>
+<p>Lastly, if the accuracy doesn&rsquo;t appear changed then stop updating the location because the user hasn&rsquo;t moved. This will preserve battery by disabling the radios upon stopping the location manager from updating.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">locationManager</span><span class="p">(</span><span class="kc">_</span> <span class="n">manager</span><span class="p">:</span> <span class="n">CLLocationManager</span><span class="p">,</span> <span class="n">didUpdateLocations</span> <span class="n">locations</span><span class="p">:</span> <span class="p">[</span><span class="n">CLLocation</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">newLocation</span> <span class="p">=</span> <span class="n">locations</span><span class="p">.</span><span class="bp">last</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;didUpdateLocations </span><span class="si">\(</span><span class="n">newLocation</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Last location is old/cached, ignore and continue search</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">newLocation</span><span class="p">.</span><span class="n">timestamp</span><span class="p">.</span><span class="n">timeIntervalSinceNow</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">5</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//ignore invalid accuracy</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">newLocation</span><span class="p">.</span><span class="n">horizontalAccuracy</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//If there was no previous location, or the accuracy is larger than the most recent one, adopt new location</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">location</span> <span class="p">==</span> <span class="kc">nil</span> <span class="o">||</span> <span class="n">location</span><span class="p">!.</span><span class="n">horizontalAccuracy</span> <span class="o">&gt;</span> <span class="n">newLocation</span><span class="p">.</span><span class="n">horizontalAccuracy</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//new location to be used, clear error</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationError</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">        <span class="n">location</span> <span class="p">=</span> <span class="n">newLocation</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//current location and new location accuracy the same, stop updating location</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">newLocation</span><span class="p">.</span><span class="n">horizontalAccuracy</span> <span class="o">&lt;=</span> <span class="n">locationManager</span><span class="p">.</span><span class="n">desiredAccuracy</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;locations similar&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stopLocationManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">getStatus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="next-steps">Next Steps</h2>
+<p>Now that the core location code is functional and decently robust, I&rsquo;ll start adding views to capture the user post content.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+  <small class="footer_copyright">
+    © 2025 Jacob Case. All rights reserved.
+  </small>
+</footer>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

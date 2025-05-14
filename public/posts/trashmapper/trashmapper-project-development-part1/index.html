@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">TrashMapper - iOS Project - CoreLocation - Part1 | Jacob Case</title>
+<meta property="og:title" content="TrashMapper - iOS Project - CoreLocation - Part1 | Jacob Case" />
+<meta name="twitter:title" content="TrashMapper - iOS Project - CoreLocation - Part1 | Jacob Case" />
+<meta itemprop="name" content="TrashMapper - iOS Project - CoreLocation - Part1 | Jacob Case" />
+<meta name="application-name" content="TrashMapper - iOS Project - CoreLocation - Part1 | Jacob Case" />
+<meta property="og:site_name" content="Jacob Case" />
+
+<meta name="description" content="Testing out core location, noting features of core location for user experience, notifications, etc">
+<meta itemprop="description" content="Testing out core location, noting features of core location for user experience, notifications, etc" />
+<meta property="og:description" content="Testing out core location, noting features of core location for user experience, notifications, etc" />
+<meta name="twitter:description" content="Testing out core location, noting features of core location for user experience, notifications, etc" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part1/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-05-24T00:00:00Z />
+    <meta property="article:published_time" content=2022-05-24T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part1/" />
+
+    
+    <meta property="og:article:author" content="Jacob Case" />
+    <meta property="article:author" content="Jacob Case" />
+    <meta name="author" content="Jacob Case" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "TrashMapper - iOS Project - CoreLocation - Part1",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-05-24",
+        "description": "Testing out core location, noting features of core location for user experience, notifications, etc",
+        "wordCount":  1063 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-05-24",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Jacob Case"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.3">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part1/">
+  <meta property="og:site_name" content="Jacob Case">
+  <meta property="og:title" content="TrashMapper - iOS Project - CoreLocation - Part1">
+  <meta property="og:description" content="Testing out core location, noting features of core location for user experience, notifications, etc">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-05-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-05-24T00:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="UIKit">
+    <meta property="article:tag" content="CoreLocation">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrashMapper - iOS Project - CoreLocation - Part1">
+  <meta name="twitter:description" content="Testing out core location, noting features of core location for user experience, notifications, etc">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part1/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">TrashMapper - iOS Project - CoreLocation - Part1</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-05-24T00:00:00&#43;00:00" itemprop="datePublished"> 24 May 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#imports-and-initial-setup">Imports and Initial Setup</a>
+      <ul>
+        <li><a href="#simple-ui-with-button">Simple UI with Button</a></li>
+        <li><a href="#start-updating-location">Start Updating Location</a>
+          <ul>
+            <li><a href="#steps">Steps</a></li>
+            <li><a href="#simulator">Simulator</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#error-handling--location-requests">Error handling &amp; Location Requests</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#clerror-domain-and-codes">CLError, domain, and codes</a></li>
+            <li><a href="#forcing-an-error">Forcing an error</a></li>
+            <li><a href="#stop-requesting-location">Stop Requesting Location</a></li>
+            <li><a href="#simulator-with-startstop-updating-location">Simulator with Start/Stop Updating Location</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#next-steps">Next Steps</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="motivation">Motivation</h2>
+<p>In my previous post I had created a list of to-do items. Normally you&rsquo;d see these broken out in some Trello board. I may migrate to that once I make more headway but for now doing it in this fashion.</p>
+<ol>
+<li>
+<p>Outline functionality for:</p>
+<ul>
+<li>CLLocation Manager &amp; related delegates &mdash;&ndash;&gt; In progress</li>
+<li>Camera usability, storing current photo</li>
+<li>Paths to photos, storage URL, etc</li>
+<li>userPost Object and related methods</li>
+<li>userPost structs and definitions</li>
+<li>Firebase cocoa pod integration</li>
+</ul>
+</li>
+<li>
+<p>Build out the User Interface</p>
+<ul>
+<li>Add Apple Mapkit</li>
+<li>Add tableBar with tableView, MapView, userProfile buttons</li>
+<li>Add getUserLocation button</li>
+<li>Add addPost button</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="core-location">Core Location</h1>
+<p>In this post I will cover the functionality I&rsquo;m looking for with Core Location. Imports, delegates, and error handling to be included. Since the location services are the primary driver in this app I wanted to spend some time solidifying my understanding of the code.</p>
+<h2 id="imports-and-initial-setup">Imports and Initial Setup</h2>
+<p>Before setting up some simple methods to query user location, I&rsquo;ll import the following: <code>import CoreLocation</code> and <code>import CoreLocationUI</code>. I&rsquo;ll be using CoreLocation first to setup a location manager object. CoreLocationUI will eventually be used in tandem with a &ldquo;get current user location&rdquo; button.</p>
+<p>Next I&rsquo;ll make the current view controller conform to the CLLocationManagerDelegate just to get up and running.</p>
+<p>Within the storyboard, I&rsquo;ll make a simple button to request current user location and embed the whole thing in a tab bar controller for future use.</p>
+<h3 id="simple-ui-with-button">Simple UI with Button</h3>
+<figure><img src="/posts/papermod/images/TrashMapper/InitialUISetup.jpg">
+</figure>
+
+<p>Below is my initial code setup to test out the &ldquo;Get Location&rdquo; button.</p>
+<h3 id="start-updating-location">Start Updating Location</h3>
+<pre tabindex="0"><code>import UIKit
+import CoreLocation
+import CoreLocationUI
+
+class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {
+
+    //1. create location manager object
+    let locationManager = CLLocationManager()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+
+    }
+
+    //2. Button action to request user data
+    @IBAction func getLocation(_ sender: Any) {
+        let authStatus = locationManager.authorizationStatus
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
+
+        //3. Assign current view controller has acting delegate for CLLocationManager
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+    }
+
+    //4. Delegate Methods
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(&#34;didFailWithError \(error)&#34;)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let newLocation = locations.last!
+        print(&#34;diddUpdateLocations \(newLocation)&#34;)
+    }
+
+}
+</code></pre><h4 id="steps">Steps</h4>
+<p>Along with the code above, the info.plist was updated to allow location access while in use. This is required before actually pulling location data.</p>
+<ol>
+<li>Creat location manager object</li>
+<li>Tie button functionality to getLocation method</li>
+<li>Check authorization, assign delegate, and start updating location
+<ul>
+<li>Start updating location will return immediately and call didUpdateLocations method</li>
+</ul>
+</li>
+<li>Delegate methods, did update locations will simply print out current user location with accuracy of ten meters.</li>
+</ol>
+<h4 id="simulator">Simulator</h4>
+<p><img src="/posts/papermod/images/TrashMapper/ShowCoordinates.gif" alt="post"></p>
+<h2 id="error-handling--location-requests">Error handling &amp; Location Requests</h2>
+<h4 id="clerror-domain-and-codes">CLError, domain, and codes</h4>
+<p>Since getting GPS coordinates and information can be error prone, I need to consider handling a few scenarios:</p>
+<ul>
+<li>User lost service/line of sight with satellite
+<ul>
+<li>CLError.network or CLError.locationUnknown</li>
+</ul>
+</li>
+<li>User turned GPS off
+<ul>
+<li>CLError.network</li>
+</ul>
+</li>
+<li>User didn&rsquo;t allow app to request location initially
+<ul>
+<li>CLError.denied</li>
+</ul>
+</li>
+</ul>
+<p>Apple provides general error codes:</p>
+<pre tabindex="0"><code>case locationUnknown
+  //A constant that indicates the location manager was unable to obtain a location value right now.
+case denied
+  //A constant that indicates the user denied access to the location service.
+case promptDeclined
+  //A constant that indicates the user didn’t grant the requested temporary authorization.
+case network
+  //A constant that indicates the network was unavailable or a network error occurred.
+case headingFailure
+  //A constant that indicates the location manager can’t determine the heading.
+case rangingUnavailable
+  //A constant that indicates ranging is disabled.
+case rangingFailure
+  //A constant that indicates a general ranging error occurred.
+</code></pre><p>With these in mind I will update the <code>didFailWithError</code> method.</p>
+<p>I think it&rsquo;s important at this point to call out what isn&rsquo;t critical for the app (as defined to this point). This is in part due to the structure of the userPosts which I haven&rsquo;t concretely spelled out yet.</p>
+<ul>
+<li>User heading</li>
+<li>Addresses (reverse geocoding)</li>
+<li>Altitude/speed</li>
+</ul>
+<p>Here is the new error handling method and also a getStatus method to check in on where we are with location services.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">getStatus</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="nb">String</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Check error code and provide a print output</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//Location error stored with &#34;didFailWithError&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//pull error domain and error code from location error</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="kd">let</span> <span class="nv">error</span> <span class="p">=</span> <span class="n">locationError</span> <span class="k">as</span> <span class="n">NSError</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">error</span><span class="p">.</span><span class="n">domain</span> <span class="p">==</span> <span class="n">kCLErrorDomain</span> <span class="o">&amp;&amp;</span> <span class="n">error</span><span class="p">.</span><span class="n">code</span> <span class="p">==</span> <span class="n">CLError</span><span class="p">.</span><span class="n">denied</span><span class="p">.</span><span class="n">rawValue</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">statusMessage</span> <span class="p">=</span> <span class="s">&#34;Location Services Disabled&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">statusMessage</span> <span class="p">=</span> <span class="s">&#34;Error Getting Location&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">!</span><span class="n">CLLocationManager</span><span class="p">.</span><span class="n">locationServicesEnabled</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">statusMessage</span> <span class="p">=</span> <span class="s">&#34;Location Services Disabled&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">updatingLocation</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">statusMessage</span> <span class="p">=</span> <span class="s">&#34;Searching...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">statusMessage</span> <span class="p">=</span> <span class="s">&#34;Tap &#39;Get Location&#39; to Start&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="n">statusMessage</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// View controller to manage this method</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// If there is an error, cast it as NSError and check the code against &#34;unknown location&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">locationManager</span><span class="p">(</span><span class="kc">_</span> <span class="n">manager</span><span class="p">:</span> <span class="n">CLLocationManager</span><span class="p">,</span> <span class="n">didFailWithError</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;didFailWithError </span><span class="si">\(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="k">as</span> <span class="n">NSError</span><span class="p">).</span><span class="n">code</span> <span class="p">==</span> <span class="n">CLError</span><span class="p">.</span><span class="n">locationUnknown</span><span class="p">.</span><span class="n">rawValue</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Location Unknown&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">locationError</span> <span class="p">=</span> <span class="n">error</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stopLocationManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">getStatus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="forcing-an-error">Forcing an error</h4>
+<p>Starting a simulator from scratch and declining the location service for the app, I receive the following error:</p>
+<pre tabindex="0"><code>didFailWithError The operation couldn’t be completed. (kCLErrorDomain error 1.)
+</code></pre><p>A few things to explain to myself: The domain error is just a way to communicate which framework the error has come from. According to Apple&rsquo;s documentation there are a number of pre-defined NSError domains. In this case we receive an error from kCLErrorDomain. The error code <code>error 1</code> matches against the CLError enum, which is the .denied case.</p>
+<h4 id="stop-requesting-location">Stop Requesting Location</h4>
+<p>Another thing to add is a request to stop the location. This will be handy later on so will implement a simple method for it now.</p>
+<p>I added an additional button to the main GUI to link with stopLocation method.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">// Button action to trigger stop updating location method</span>
+</span></span><span class="line"><span class="cl"><span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">stopLocation</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Stop Upating Location&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stopLocationManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">getStatus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">stopLocationManager</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">updatingLocation</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationManager</span><span class="p">.</span><span class="n">stopUpdatingLocation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">locationManager</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">        <span class="n">updatingLocation</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="simulator-with-startstop-updating-location">Simulator with Start/Stop Updating Location</h4>
+<p><img src="/posts/papermod/images/TrashMapper/StartStopLocation.gif" alt="post"></p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Thinking out loud, it would be good to have functionality that checks if the user location is changing or not. If it&rsquo;s not, there should be no reason to continue updating the location and draining battery.</p>
+<p>The error handling is a little disheveled. It might be better represented by a switch statement or something to improve organization.</p>
+<p>Having the userPost struct may also be helpful at this time to define just so that I can practice creating and storing posts as needed with necessary location information.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+  <small class="footer_copyright">
+    © 2025 Jacob Case. All rights reserved.
+  </small>
+</footer>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

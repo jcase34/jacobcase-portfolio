@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">TrashMapper - iOS Project - Development - Part5 | Jacob Case</title>
+<meta property="og:title" content="TrashMapper - iOS Project - Development - Part5 | Jacob Case" />
+<meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part5 | Jacob Case" />
+<meta itemprop="name" content="TrashMapper - iOS Project - Development - Part5 | Jacob Case" />
+<meta name="application-name" content="TrashMapper - iOS Project - Development - Part5 | Jacob Case" />
+<meta property="og:site_name" content="Jacob Case" />
+
+<meta name="description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController.">
+<meta itemprop="description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController." />
+<meta property="og:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController." />
+<meta name="twitter:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-06-01T00:00:00Z />
+    <meta property="article:published_time" content=2022-06-01T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/" />
+
+    
+    <meta property="og:article:author" content="Jacob Case" />
+    <meta property="article:author" content="Jacob Case" />
+    <meta name="author" content="Jacob Case" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "TrashMapper - iOS Project - Development - Part5",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-06-01",
+        "description": "Updated buttons on MapView. Changed tag location view controller to UITableViewController.",
+        "wordCount":  511 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-06-01",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Jacob Case"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.3">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/">
+  <meta property="og:site_name" content="Jacob Case">
+  <meta property="og:title" content="TrashMapper - iOS Project - Development - Part5">
+  <meta property="og:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-06-01T00:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="UIKit">
+    <meta property="article:tag" content="CoreLocation">
+    <meta property="article:tag" content="TableView">
+    <meta property="article:tag" content="Segue">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part5">
+  <meta name="twitter:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">TrashMapper - iOS Project - Development - Part5</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-06-01T00:00:00&#43;00:00" itemprop="datePublished"> 1 Jun 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#updates">Updates</a>
+      <ul>
+        <li><a href="#uiviewcontrollers-to-static-uitableviewcontrollers">UIViewControllers to Static UITableViewControllers</a></li>
+        <li><a href="#load-and-zoom-to-user">Load and Zoom to user</a></li>
+        <li><a href="#add-location-and-new-tableviewcontroller-for-tagging-location">Add Location and New TableViewController for Tagging Location</a></li>
+        <li><a href="#simulator">Simulator</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="updates">Updates</h2>
+<p>Whew, what a day it has been! I spent a solid 5-6 hours reviewing the outline of this application. Flow, navigation, controller setup, all went through some more thought and comparison of projects online.</p>
+<p>Let&rsquo;s go ahead and dive into some of the changes.</p>
+<p>Also to note - I&rsquo;m currently working from the develop branch of this project. I plan to create separate branches for camera functionality, firebase, and others moving forward.</p>
+<p>Location of code is here - <a href="https://github.com/jcase34/TrashMapper-iOS-Project/tree/develop">TrashMapper/tree/develop</a></p>
+<hr>
+<h3 id="uiviewcontrollers-to-static-uitableviewcontrollers">UIViewControllers to Static UITableViewControllers</h3>
+<p>Up first in the change list was the LocationDetailViewController. Initially this was a normal UIViewController. I had planned to add a button for the image capture, some labels, and a description field to capture text from the user.</p>
+<p>After doing some hunting online though I found that incorporating a UITableViewController would be easier to manage in terms of the visual view and information capture.</p>
+<p><img src="/posts/papermod/images/TrashMapper/ViewsPart5.png" alt="map"></p>
+<p>The user profile has still yet to be filled out, so only a placeholder for now.</p>
+<hr>
+<h3 id="load-and-zoom-to-user">Load and Zoom to user</h3>
+<p>One feature I wanted to replicate was the initial zoom to user location as seen on Google Maps.</p>
+<p>The logic behind this still needs to be cleaned up. Right now I&rsquo;m using a timer, but really I should be checking for when we are no longer searching for a location.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c1">// Do any additional setup after loading the view.</span>
+</span></span><span class="line"><span class="cl">   <span class="bp">print</span><span class="p">(</span><span class="s">&#34;At mapviewcontroller&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">timer</span> <span class="p">=</span> <span class="n">Timer</span><span class="p">.</span><span class="n">scheduledTimer</span><span class="p">(</span><span class="n">timeInterval</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="kc">self</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">zoomUserLocation</span><span class="p">),</span> <span class="n">userInfo</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">repeats</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c1">//pull data from firebase</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">//load as pins on map</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">//fetched posts should omit userID for privacy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="kc">_</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kc">super</span><span class="p">.</span><span class="n">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">getLocation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>I&rsquo;m leaving it as is for now because the simulator has some oddities when first establishing location.</p>
+<figure><img src="/posts/papermod/images/TrashMapper/MapZoomPart5.gif">
+</figure>
+
+<hr>
+<h3 id="add-location-and-new-tableviewcontroller-for-tagging-location">Add Location and New TableViewController for Tagging Location</h3>
+<p>This is the final major edit to the project so far. I swapped the UIViewController out for a UITableViewController and assigned the table to static instead of dynamic.</p>
+<p>There is a way to keep the dynamic property set on the tablView, but do to the amount of time I struggled with this and functionality I need, static will do OK.</p>
+<p>I use the same &ldquo;Add Photo&rdquo; but this time in a tableViewCell, attaching constraints to the edges of the cell size. I also take advantage of the data labels assigned within the cells and use those to populate a dummy location of interest.</p>
+<figure><img src="/posts/papermod/images/TrashMapper/TableViewPart5.png">
+</figure>
+
+<p>To populate the table view, I use a prepare segue that contains the location coordinates and pass those off to the LocationDetailViewController. The date parameter is created when called, and the description is just replaced with a dummy string.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl">  <span class="c1">//mapviewcontroller</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> - Navigation</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">for</span> <span class="n">segue</span><span class="p">:</span> <span class="n">UIStoryboardSegue</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">?)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;prepping for segue, identifier = </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">segue</span><span class="p">.</span><span class="n">identifier</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">segue</span><span class="p">.</span><span class="n">identifier</span> <span class="p">==</span> <span class="s">&#34;AddLocation&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">destinationVC</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">destination</span> <span class="k">as</span><span class="p">!</span> <span class="n">LocationDetailsViewController</span>
+</span></span><span class="line"><span class="cl">            <span class="n">destinationVC</span><span class="p">.</span><span class="n">coordinate</span> <span class="p">=</span> <span class="n">location</span><span class="p">!.</span><span class="n">coordinate</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//LocationDetailViewController</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Do any additional setup after loading the view.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">descriptionTextView</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&#34;hello world&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">latitudeLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&#34;%.8f&#34;</span><span class="p">,</span> <span class="n">coordinate</span><span class="p">.</span><span class="n">latitude</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">longitudeLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&#34;%.8f&#34;</span><span class="p">,</span> <span class="n">coordinate</span><span class="p">.</span><span class="n">longitude</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dateLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="n">Date</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><h3 id="simulator">Simulator</h3>
+<figure><img src="/posts/papermod/images/TrashMapper/AddLocationPart5.gif">
+</figure>
+
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+  <small class="footer_copyright">
+    © 2025 Jacob Case. All rights reserved.
+  </small>
+</footer>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

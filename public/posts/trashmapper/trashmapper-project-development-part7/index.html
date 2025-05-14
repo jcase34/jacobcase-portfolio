@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">TrashMapper - iOS Project - Development - Part7 | Jacob Case</title>
+<meta property="og:title" content="TrashMapper - iOS Project - Development - Part7 | Jacob Case" />
+<meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part7 | Jacob Case" />
+<meta itemprop="name" content="TrashMapper - iOS Project - Development - Part7 | Jacob Case" />
+<meta name="application-name" content="TrashMapper - iOS Project - Development - Part7 | Jacob Case" />
+<meta property="og:site_name" content="Jacob Case" />
+
+<meta name="description" content="Create Post View Controller Edits.">
+<meta itemprop="description" content="Create Post View Controller Edits." />
+<meta property="og:description" content="Create Post View Controller Edits." />
+<meta name="twitter:description" content="Create Post View Controller Edits." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part7/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-06-12T00:00:00Z />
+    <meta property="article:published_time" content=2022-06-12T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part7/" />
+
+    
+    <meta property="og:article:author" content="Jacob Case" />
+    <meta property="article:author" content="Jacob Case" />
+    <meta name="author" content="Jacob Case" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "TrashMapper - iOS Project - Development - Part7",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-06-12",
+        "description": "Create Post View Controller Edits.",
+        "wordCount":  981 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-06-12",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Jacob Case"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.3">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part7/">
+  <meta property="og:site_name" content="Jacob Case">
+  <meta property="og:title" content="TrashMapper - iOS Project - Development - Part7">
+  <meta property="og:description" content="Create Post View Controller Edits.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-06-12T00:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="UIKit">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part7">
+  <meta name="twitter:description" content="Create Post View Controller Edits.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part7/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">TrashMapper - iOS Project - Development - Part7</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-06-12T00:00:00&#43;00:00" itemprop="datePublished"> 12 Jun 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#updates">Updates</a>
+      <ul>
+        <li><a href="#code-for-createpostviewcontroller">Code for CreatePostViewController</a></li>
+        <li><a href="#simulation-on-phone">Simulation on Phone</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="updates">Updates</h2>
+<p>Made some additional updates to the CreatePostViewController.</p>
+<ul>
+<li>Keyboard now dismisses when the user taps away from the UITextFieldView</li>
+<li>A character counter is visible on the UITextField view and limits the character count to 100
+<ul>
+<li>May reduce to keep descriptions short</li>
+</ul>
+</li>
+<li>Date formatter no longer adds a time in, only the month, day, year.</li>
+<li>Fill in UITextField with placeholder text. When tapped, change the font color to black clear text view.
+<ul>
+<li>If no text entered, and user tapped away, refill with placeholder text</li>
+</ul>
+</li>
+<li>Added a constants file to prevent file depending naming/values</li>
+</ul>
+<hr>
+<h3 id="code-for-createpostviewcontroller">Code for CreatePostViewController</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//  CreatePostViewController.swift</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  TrashMapper</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  Created by Jacob Case on 5/28/22.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">UIKit</span>
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">CoreLocation</span>
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">MapKit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//Create outside viewController class to only instantiate a single formatter to be used everytime</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">let</span> <span class="nv">dateFormatter</span><span class="p">:</span> <span class="n">DateFormatter</span> <span class="p">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nv">formatter</span> <span class="p">=</span> <span class="n">DateFormatter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="n">formatter</span><span class="p">.</span><span class="n">dateStyle</span> <span class="p">=</span> <span class="p">.</span><span class="n">medium</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">formatter</span>
+</span></span><span class="line"><span class="cl"><span class="p">}()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">CreatePostViewController</span><span class="p">:</span> <span class="n">UITableViewController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//outlets for main screen</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">addPhotoButton</span><span class="p">:</span> <span class="n">UIButton</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">descriptionTextView</span><span class="p">:</span> <span class="n">UITextView</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">dateLabel</span><span class="p">:</span> <span class="n">UILabel</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">numCharsLeft</span><span class="p">:</span> <span class="n">UILabel</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//grab junk photo for demonstration</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">bundleImage</span><span class="p">:</span> <span class="n">UIImage</span><span class="p">?</span> <span class="p">=</span> <span class="n">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&#34;trash_in_park.jpg&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//image variable for picker and delegates</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">image</span><span class="p">:</span> <span class="n">UIImage</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//variable for segue data transfer, test post</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">coordinate</span> <span class="p">=</span> <span class="n">CLLocationCoordinate2D</span> <span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">longitude</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Do any additional setup after loading the view.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//create gesture recognizer for tap outside of UITextView</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">gestureRecognizer</span> <span class="p">=</span> <span class="n">UITapGestureRecognizer</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="kc">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">hideKeyboard</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">gestureRecognizer</span><span class="p">.</span><span class="n">cancelsTouchesInView</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tableView</span><span class="p">.</span><span class="n">addGestureRecognizer</span><span class="p">(</span><span class="n">gestureRecognizer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//Load information for a bogus/test location</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dateLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="n">Date</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//UITextView Setup</span>
+</span></span><span class="line"><span class="cl">        <span class="n">descriptionTextView</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">K</span><span class="p">.</span><span class="n">descriptionTextFieldText</span>
+</span></span><span class="line"><span class="cl">        <span class="n">descriptionTextView</span><span class="p">.</span><span class="n">textColor</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">lightGray</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//Delegate assignments</span>
+</span></span><span class="line"><span class="cl">        <span class="n">descriptionTextView</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//max char length allowed for description text</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numCharsLeft</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">K</span><span class="p">.</span><span class="n">numCharsLeft</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//ISSUE - addPhotoButton.addDashedBorder() does not work, doesn&#39;t cover entire frame.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//addPhotoButton.addDashedBorder()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//ToDo</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//App Looks better in white for demonstration</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//Update later with custom Xibs, colors, etc</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="kc">_</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">super</span><span class="p">.</span><span class="n">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">navigationController</span><span class="p">?.</span><span class="n">isNavigationBarHidden</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="n">navigationItem</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="n">K</span><span class="p">.</span><span class="n">createPostViewTitle</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p>Helper methods to setup the date formatter and dismissal of keyboard.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl">    <span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Helper Methods</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">format</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="n">Date</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">dateFormatter</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="n">date</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">hideKeyboard</span><span class="p">(</span><span class="kc">_</span> <span class="n">gestureRecognizer</span><span class="p">:</span> <span class="n">UIGestureRecognizer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//refernce point from user tap</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">point</span> <span class="p">=</span> <span class="n">gestureRecognizer</span><span class="p">.</span><span class="n">location</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="n">tableView</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//match point from tap to location on tableView</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">indexPath</span> <span class="p">=</span> <span class="n">tableView</span><span class="p">.</span><span class="n">indexPathForRow</span><span class="p">(</span><span class="n">at</span><span class="p">:</span> <span class="n">point</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//if user tap anywhere outide of UITextView, dismiss keybaord</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">indexPath</span> <span class="p">=</span> <span class="n">indexPath</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">indexPath</span><span class="p">.</span><span class="n">row</span> <span class="o">!=</span> <span class="mi">3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">descriptionTextView</span><span class="p">.</span><span class="n">resignFirstResponder</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Data Manager Tasks (Firebase)</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span></code></pre></div><p>Created an extension to track button functionality. I don&rsquo;t believe this is typical architecture but I did this just to organize things for now.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Button functions</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">CreatePostViewController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">addPhotoButton</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;add photo tapped&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pickPhoto</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">cancel</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;cancel tapped&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">navigationController</span><span class="p">?.</span><span class="n">popViewController</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//move back to previous view controller</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//ping location?</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//remove picture, and other potential post information</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">submit</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;submit tapped&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//create a userPost (date, image, description, user info, postID, etc)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//push to firebase</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//HUD view with &#34;Location Added&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Below method activates the keyboard when the UITextView is tapped by user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Table View Methods</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">CreatePostViewController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//Keyboard activation for description area</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="kc">_</span> <span class="n">tableView</span><span class="p">:</span> <span class="n">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAt</span> <span class="n">indexPath</span><span class="p">:</span> <span class="n">IndexPath</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">indexPath</span><span class="p">.</span><span class="n">section</span> <span class="p">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">indexPath</span><span class="p">.</span><span class="n">row</span> <span class="p">==</span> <span class="mi">3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">descriptionTextView</span><span class="p">.</span><span class="n">becomeFirstResponder</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Below are methods for both delegate, alertController, and image selection.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Image Picker and Selection</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">CreatePostViewController</span> <span class="p">:</span> <span class="n">UIImagePickerControllerDelegate</span><span class="p">,</span> <span class="n">UINavigationControllerDelegate</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">imagePickerController</span><span class="p">(</span><span class="kc">_</span> <span class="n">picker</span><span class="p">:</span> <span class="n">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="n">info</span><span class="p">:</span> <span class="p">[</span><span class="n">UIImagePickerController</span><span class="p">.</span><span class="n">InfoKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//After photo picked, grap photo from infokeys</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image</span> <span class="p">=</span> <span class="n">info</span><span class="p">[</span><span class="n">UIImagePickerController</span><span class="p">.</span><span class="n">InfoKey</span><span class="p">.</span><span class="n">editedImage</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="n">UIImage</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">theImage</span> <span class="p">=</span> <span class="n">image</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//display photo within button &#34;addPhoto&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">displayImageOnButton</span><span class="p">(</span><span class="n">theImage</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">             To Dos:
+</span></span></span><span class="line"><span class="cl"><span class="cm">             function to grab directory of app
+</span></span></span><span class="line"><span class="cl"><span class="cm">             assign unique UUID to photo (better strategy?)
+</span></span></span><span class="line"><span class="cl"><span class="cm">             store a compressed image within file via URL (as big as AddPhoto button for consistancy)
+</span></span></span><span class="line"><span class="cl"><span class="cm">             store location of that image, wiping if we cancel out or select different image
+</span></span></span><span class="line"><span class="cl"><span class="cm">             */</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">dismiss</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">takePhotoWithCamera</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">imagePicker</span> <span class="p">=</span> <span class="n">UIImagePickerController</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imagePicker</span><span class="p">.</span><span class="n">sourceType</span> <span class="p">=</span> <span class="p">.</span><span class="n">camera</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imagePicker</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imagePicker</span><span class="p">.</span><span class="n">allowsEditing</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="n">present</span><span class="p">(</span><span class="n">imagePicker</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">choosePhotoFromLibrary</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">imagePicker</span> <span class="p">=</span> <span class="n">UIImagePickerController</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imagePicker</span><span class="p">.</span><span class="n">sourceType</span> <span class="p">=</span> <span class="p">.</span><span class="n">photoLibrary</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imagePicker</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imagePicker</span><span class="p">.</span><span class="n">allowsEditing</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="n">present</span><span class="p">(</span><span class="n">imagePicker</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">pickPhoto</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">UIImagePickerController</span><span class="p">.</span><span class="n">isSourceTypeAvailable</span><span class="p">(.</span><span class="n">camera</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">showPhotoSelectionMenu</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">choosePhotoFromLibrary</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">showPhotoSelectionMenu</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">alert</span> <span class="p">=</span> <span class="n">UIAlertController</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">preferredStyle</span><span class="p">:</span> <span class="p">.</span><span class="n">actionSheet</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">actCancel</span> <span class="p">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Cancel&#34;</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="p">.</span><span class="n">cancel</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">actCancel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">actPhoto</span> <span class="p">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Take Photo&#34;</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="p">{</span> <span class="kc">_</span> <span class="k">in</span> <span class="kc">self</span><span class="p">.</span><span class="n">takePhotoWithCamera</span><span class="p">()})</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">actPhoto</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">actLibrary</span> <span class="p">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Choose From Library&#34;</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="p">{</span> <span class="kc">_</span> <span class="k">in</span> <span class="kc">self</span><span class="p">.</span><span class="n">choosePhotoFromLibrary</span><span class="p">()})</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">actLibrary</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">present</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">displayImageOnButton</span><span class="p">(</span><span class="kc">_</span> <span class="n">image</span><span class="p">:</span> <span class="n">UIImage</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">addPhotoButton</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="k">for</span><span class="p">:</span> <span class="p">.</span><span class="n">normal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Below are customized delegate methods that are used:</p>
+<ul>
+<li>Add placeholder text to UITextView if nothing present</li>
+<li>Auto empty placeholder text when UITextView selected</li>
+<li>Keep track of characters entered in the UITextView</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Text View Delegate</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">CreatePostViewController</span> <span class="p">:</span> <span class="n">UITextViewDelegate</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//if textview empty, display a placeholder text</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">textViewDidEndEditing</span><span class="p">(</span><span class="kc">_</span> <span class="n">textView</span><span class="p">:</span> <span class="n">UITextView</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">textView</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">textView</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&#34;Enter Description Here&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">textView</span><span class="p">.</span><span class="n">textColor</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">lightGray</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//once user starts typing, change text to black</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">textViewDidBeginEditing</span><span class="p">(</span><span class="kc">_</span> <span class="n">textView</span><span class="p">:</span> <span class="n">UITextView</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">textView</span><span class="p">.</span><span class="n">textColor</span> <span class="p">==</span> <span class="p">.</span><span class="n">lightGray</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">textView</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">            <span class="n">textView</span><span class="p">.</span><span class="n">textColor</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">black</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//show number of characters left for description field</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">textView</span><span class="p">(</span><span class="kc">_</span> <span class="n">textView</span><span class="p">:</span> <span class="n">UITextView</span><span class="p">,</span> <span class="n">shouldChangeTextIn</span> <span class="n">range</span><span class="p">:</span> <span class="n">NSRange</span><span class="p">,</span> <span class="n">replacementText</span> <span class="n">text</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//if no text in the view, return</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="kd">let</span> <span class="nv">textField</span> <span class="p">=</span> <span class="n">textView</span><span class="p">.</span><span class="n">text</span> <span class="k">else</span> <span class="p">{</span><span class="k">return</span> <span class="kc">true</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//grab the current text count, replacement count, and desired range as a length</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">charLength</span> <span class="p">=</span> <span class="n">K</span><span class="p">.</span><span class="n">charLength</span> <span class="o">-</span> <span class="p">(</span><span class="n">textField</span><span class="p">.</span><span class="bp">count</span> <span class="o">+</span> <span class="n">text</span><span class="p">.</span><span class="bp">count</span> <span class="o">-</span> <span class="n">range</span><span class="p">.</span><span class="n">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//update the cell detail label</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numCharsLeft</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&#34;Characters left: </span><span class="si">\(</span><span class="n">charLength</span><span class="si">)</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//only allow text update if under 100 chars</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">charLength</span> <span class="o">&lt;=</span> <span class="mi">99</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><hr>
+<h3 id="simulation-on-phone">Simulation on Phone</h3>
+<p>The simulation below shows an inital loading of the app with user authorization already selected.</p>
+<p>In the latter half of the gif, you can see the CreatePostViewController coming along.</p>
+<figure><img src="/posts/papermod/images/TrashMapper/CreatePostPart7.gif" width="300" height="600">
+</figure>
+
+<hr>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+  <small class="footer_copyright">
+    © 2025 Jacob Case. All rights reserved.
+  </small>
+</footer>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

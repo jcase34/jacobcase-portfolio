@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Jacob Case</title>
-    <link>http://localhost:50261/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in Projects on Jacob Case</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:50261/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cappriccio: Piano Practice Manager for iOS</title>
-      <link>http://localhost:50261/projects/piano-practice-app/</link>
+      <link>http://localhost:1313/projects/cappriccio-piano-practice-app/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:50261/projects/piano-practice-app/</guid>
+      <guid>http://localhost:1313/projects/cappriccio-piano-practice-app/</guid>
       
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:50261/images/cappriccio-screenshot.jpg&#34; alt=&#34;Cappriccio App Screenshot&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/projects/cappriccio-piano-practice-app/cappriccio-home-page.png&#34; alt=&#34;Cappriccio App Screenshot&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Cappriccio&lt;/strong&gt; is an iOS app I designed and developed to help piano players structure and track their daily practice sessions for maximum improvement.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-problem&#34;&gt;📝 Problem&lt;/h2&gt;

@@ -2,46 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:50261/projects/piano-practice-app/</loc>
+    <loc>http://localhost:1313/projects/piano-practice-app/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/table-of-content/</loc>
+    <loc>http://localhost:1313/posts/table-of-content/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/math-typesetting/</loc>
+    <loc>http://localhost:1313/posts/math-typesetting/</loc>
     <lastmod>2023-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/markdown-syntax/</loc>
+    <loc>http://localhost:1313/posts/markdown-syntax/</loc>
     <lastmod>2023-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/rich-content/</loc>
+    <loc>http://localhost:1313/posts/rich-content/</loc>
     <lastmod>2023-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/placeholder-text/</loc>
+    <loc>http://localhost:1313/posts/placeholder-text/</loc>
     <lastmod>2023-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/tags/emoji/</loc>
+    <loc>http://localhost:1313/tags/emoji/</loc>
     <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/posts/emoji-support/</loc>
+    <loc>http://localhost:1313/posts/emoji-support/</loc>
     <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/pages/about/</loc>
+    <loc>http://localhost:1313/tags/annotations/</loc>
+    <lastmod>2022-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/categories/</loc>
+    <loc>http://localhost:1313/tags/project/</loc>
+    <lastmod>2022-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50261/pages/</loc>
+    <loc>http://localhost:1313/tags/swift/</loc>
+    <lastmod>2022-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</loc>
+    <lastmod>2022-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</loc>
+    <lastmod>2022-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/uikit/</loc>
+    <lastmod>2022-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part7/trashmapper-project-development-part7/</loc>
+    <lastmod>2022-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/corelocation/</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/imagepicker/</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mapview/</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/segue/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tableview/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/firebase/</loc>
+    <lastmod>2022-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</loc>
+    <lastmod>2022-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</loc>
+    <lastmod>2022-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</loc>
+    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-concept/</loc>
+    <lastmod>2022-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/trashmapper-project-features/trashmapper-project-features/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pages/</loc>
   </url>
 </urlset>

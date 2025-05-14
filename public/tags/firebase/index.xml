@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firebase on Jacob Case</title>
+    <link>http://localhost:1313/tags/firebase/</link>
+    <description>Recent content in Firebase on Jacob Case</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 26 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part4</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Few more updates added&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates
+&lt;ul&gt;
+&lt;li&gt;Mostly complete, major functionality included&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration
+&lt;ul&gt;
+&lt;li&gt;Added, no analytics included for now. May integrate later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Apple Mapkit
+&lt;ul&gt;
+&lt;li&gt;Added to unique view controller with tab&lt;/li&gt;
+&lt;li&gt;Needs constraints on the view/tab&lt;/li&gt;
+&lt;li&gt;Added in get user location button
+&lt;ul&gt;
+&lt;li&gt;Function to zoom on user added&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add tableBar with tableView, MapView, userProfile buttons
+&lt;ul&gt;
+&lt;li&gt;In progress, two tab bars included&lt;/li&gt;
+&lt;li&gt;May not do the tableView for initial release&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add getUserLocation button
+&lt;ul&gt;
+&lt;li&gt;Tag location view added with basic information
+&lt;ul&gt;
+&lt;li&gt;Longitude&lt;/li&gt;
+&lt;li&gt;Latitude&lt;/li&gt;
+&lt;li&gt;Description&lt;/li&gt;
+&lt;li&gt;Button for Image Picker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add addPost button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;updates-to-views&#34;&gt;Updates to Views&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

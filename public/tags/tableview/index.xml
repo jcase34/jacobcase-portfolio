@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TableView on Jacob Case</title>
+    <link>http://localhost:1313/tags/tableview/</link>
+    <description>Recent content in TableView on Jacob Case</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/tableview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part5</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Whew, what a day it has been! I spent a solid 5-6 hours reviewing the outline of this application. Flow, navigation, controller setup, all went through some more thought and comparison of projects online.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s go ahead and dive into some of the changes.&lt;/p&gt;
+&lt;p&gt;Also to note - I&amp;rsquo;m currently working from the develop branch of this project. I plan to create separate branches for camera functionality, firebase, and others moving forward.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

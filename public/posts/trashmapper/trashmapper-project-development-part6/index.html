@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">TrashMapper - iOS Project - Development - Part6 | Jacob Case</title>
+<meta property="og:title" content="TrashMapper - iOS Project - Development - Part6 | Jacob Case" />
+<meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part6 | Jacob Case" />
+<meta itemprop="name" content="TrashMapper - iOS Project - Development - Part6 | Jacob Case" />
+<meta name="application-name" content="TrashMapper - iOS Project - Development - Part6 | Jacob Case" />
+<meta property="og:site_name" content="Jacob Case" />
+
+<meta name="description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController.">
+<meta itemprop="description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController." />
+<meta property="og:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController." />
+<meta name="twitter:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part6/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-06-06T00:00:00Z />
+    <meta property="article:published_time" content=2022-06-06T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part6/" />
+
+    
+    <meta property="og:article:author" content="Jacob Case" />
+    <meta property="article:author" content="Jacob Case" />
+    <meta name="author" content="Jacob Case" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "TrashMapper - iOS Project - Development - Part6",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-06-06",
+        "description": "Updated buttons on MapView. Changed tag location view controller to UITableViewController.",
+        "wordCount":  1515 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-06-06",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Jacob Case"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.3">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part6/">
+  <meta property="og:site_name" content="Jacob Case">
+  <meta property="og:title" content="TrashMapper - iOS Project - Development - Part6">
+  <meta property="og:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-06-06T00:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="UIKit">
+    <meta property="article:tag" content="CoreLocation">
+    <meta property="article:tag" content="MapView">
+    <meta property="article:tag" content="ImagePicker">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrashMapper - iOS Project - Development - Part6">
+  <meta name="twitter:description" content="Updated buttons on MapView. Changed tag location view controller to UITableViewController.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/trashmapper/trashmapper-project-development-part6/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">TrashMapper - iOS Project - Development - Part6</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-06-06T00:00:00&#43;00:00" itemprop="datePublished"> 6 Jun 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#updates">Updates</a>
+      <ul>
+        <li><a href="#firebase-and-postmodel">FireBase and PostModel</a></li>
+        <li><a href="#firebase-flat-denormalized-structure">Firebase Flat (Denormalized) structure</a></li>
+        <li><a href="#image-capture-and-display">Image Capture and Display</a></li>
+        <li><a href="#annotations">Annotations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="updates">Updates</h2>
+<p>Most of the work I&rsquo;ve been putting into the app recently has been around Firebase and MKAnnotation views for the map.</p>
+<p>Learning about Firebase has certainly been a process. Different stacks to choose from (i.e storage, realtime db, firestore), but feel like I&rsquo;m closing in on a good solution. Will cover some of the topics today.</p>
+<p>As for the MKAnnotations, I spent a few hours today playing around with different ways to display an annotation view, thinking about the best way to structure my annotations given my Firebase utility and so on.</p>
+<hr>
+<h3 id="firebase-and-postmodel">FireBase and PostModel</h3>
+<p>I&rsquo;ve been reading a lot of Google&rsquo;s help docs around FireBase, what makes a good data structure, and what features are best to use considering the apps use case. I couldn&rsquo;t keep all these thoughts together so I created a Firebase Considerations.md file within my project folder as a reference. Here is what I&rsquo;ve gathered so far.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">FireStore</th>
+          <th style="text-align: left">Realtime DB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Collections</td>
+          <td style="text-align: left">Big JSON file</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Realtime Updates</td>
+          <td style="text-align: left">Realtime Updates</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Multi Region</td>
+          <td style="text-align: left">Single Region</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Added Security</td>
+          <td style="text-align: left">Simplified security</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Sort and Filter</td>
+          <td style="text-align: left">No sorting/filtering</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Charged per read/write, no matter size</td>
+          <td style="text-align: left">Charged based on bandwidth/storage updates</td>
+      </tr>
+  </tbody>
+</table>
+<p>So a lot to consider. There is also the need of using FireBase Storage for file/image saving as noted per this <a href="https://stackoverflow.com/questions/63693660/firebase-firestore-ios-how-can-i-save-images-to-a-collection-in-the-firestore">link</a>. Common answer to this type of question is that FireStore and Realtime DB are setup to capture non-image types where as storage is for larger files.</p>
+<h3 id="firebase-flat-denormalized-structure">Firebase Flat (Denormalized) structure</h3>
+<p>I&rsquo;ve also been looking more into how to setup a valid PostModel, what make sense for firebase and so on. Here is what I&rsquo;ve learned so far along with considerations for the future development of the app.</p>
+<p>Realtime DB stores everything as one large JSON file. This means there are no tables/records, something that normal SQL database would have. When elements are added to a JSON tree, the tree just adds on a node with the information and the tree grows.</p>
+<p>Per the Google documentation on setting up a flat data structure, here was my first approach in setting one up. The JSON tree will have a users node that will grow per user created. Each user will have locations that they submit, so that part will grow continuously.</p>
+<pre tabindex="0"><code>&#34;Users&#34; : {
+    &#34;user1&#34; : {
+        &#34;Username&#34; : &#34;John&#34;
+        &#34;Password&#34; : &#34;Applesseed&#34;
+        &#34;TaggedLocations&#34; : {
+            &#34;Location1&#34; : {
+                &#34;photoURL&#34; : some image
+                &#34;Longitude&#34; : 134.54
+                &#34;Latitude&#34; : 85.124
+                &#34;LocationDescription&#34; : Trash near street
+                &#34;Date&#34; : 24Jan 2022
+            }
+            &#34;Location2&#34; : {
+                &#34;photoURL&#34; : some image
+                &#34;Longitude&#34; : 235.4
+                &#34;Latitude&#34; : 08.5
+                &#34;LocationDescription&#34; : Trash in a park
+                &#34;Date&#34; : 24Jan 2022
+            }
+        }
+    &#34;User2&#34; : {...
+    &#34;User3&#34; : {...}
+}
+</code></pre><p>The problem I can see with this is that as it grows there will be long iteration times going through the location data to pull into the app. It&rsquo;s possible that a user can have 100&rsquo;s of tagged locations, so will have to access the user, and then pull out the Tagged Locations which is nested.</p>
+<p>Another approach is to setup the JSON tree as follows.</p>
+<pre tabindex="0"><code>&#34;Users&#34; : {
+    &#34;user1&#34; : {
+        &#34;Username&#34; : &#34;John&#34;
+        &#34;Password&#34; : &#34;Applesseed&#34;
+        &#34;Location1&#34; : true
+    }
+    &#34;User2&#34; : {...}
+    &#34;User3&#34; : {...}
+
+&#34;Locations&#34; : {
+    &#34;Location1&#34; : {
+      &#34;John&#34; : True
+      &#34;User2&#34; : false
+      &#34;User3&#34; : false
+      &#34;photoURL&#34; : some image
+      &#34;Longitude&#34; : 134.54
+      &#34;Latitude&#34; : 85.124
+      &#34;LocationDescription&#34; : Trash near street
+      &#34;Date&#34; : 24Jan 2022
+    }
+}
+</code></pre><p>In this case, the locations are broken out and a two way relationship is formed via username and Location. There is the issue where per location, we have to add every user to the location and that could be a very long list. I&rsquo;m honestly not sure which path is best, more research to come.</p>
+<hr>
+<h3 id="image-capture-and-display">Image Capture and Display</h3>
+<p>The LocationDetailViewController has undergone multiple changes. The add photo button is now functional and prompts the user to select from either library photos or to take a picture.</p>
+<figure><img src="/posts/papermod/images/TrashMapper/addPhotoPart6.gif">
+</figure>
+
+<p>The alert controller is not shown because I&rsquo;m runnin the simulator on desktop. Here is the code snippet allowing the selection.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">addPhotoButton</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;add photo tapped&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pickPhoto</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">pickPhoto</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">UIImagePickerController</span><span class="p">.</span><span class="n">isSourceTypeAvailable</span><span class="p">(.</span><span class="n">camera</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">showPhotoMenu</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">choosePhotoFromLibrary</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">showPhotoMenu</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">alert</span> <span class="p">=</span> <span class="n">UIAlertController</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">preferredStyle</span><span class="p">:</span> <span class="p">.</span><span class="n">actionSheet</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">actCancel</span> <span class="p">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Cancel&#34;</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="p">.</span><span class="n">cancel</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">actCancel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">actPhoto</span> <span class="p">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Take Photo&#34;</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="p">{</span> <span class="kc">_</span> <span class="k">in</span> <span class="kc">self</span><span class="p">.</span><span class="n">takePhotoWithCamera</span><span class="p">()})</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">actPhoto</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">actLibrary</span> <span class="p">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Choose From Library&#34;</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="p">{</span> <span class="kc">_</span> <span class="k">in</span> <span class="kc">self</span><span class="p">.</span><span class="n">choosePhotoFromLibrary</span><span class="p">()})</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">actLibrary</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">present</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Pretty simple logic. Once the addPhoto button is pressed, we call pickPhoto. PickPhoto checks the source type available. If the camera is available, we ask the user if they want to select from library or take a live photo.</p>
+<p>Based on the option selected, we call one of the two functions below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">takePhotoWithCamera</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">imagePicker</span> <span class="p">=</span> <span class="n">UIImagePickerController</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imagePicker</span><span class="p">.</span><span class="n">sourceType</span> <span class="p">=</span> <span class="p">.</span><span class="n">camera</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imagePicker</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imagePicker</span><span class="p">.</span><span class="n">allowsEditing</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">present</span><span class="p">(</span><span class="n">imagePicker</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">choosePhotoFromLibrary</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">imagePicker</span> <span class="p">=</span> <span class="n">UIImagePickerController</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imagePicker</span><span class="p">.</span><span class="n">sourceType</span> <span class="p">=</span> <span class="p">.</span><span class="n">photoLibrary</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imagePicker</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imagePicker</span><span class="p">.</span><span class="n">allowsEditing</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">present</span><span class="p">(</span><span class="n">imagePicker</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Either choosePhotoFromLibrary or takePhotoWithCamera is selected. A picker is assigned and we go through the process of selecting a photo. Once a photo is selected, the LocationDetailViewController will act as the delegate to pull out the selected image.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - Image Picker Delegate</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">CreatePostViewController</span> <span class="p">:</span> <span class="n">UIImagePickerControllerDelegate</span><span class="p">,</span> <span class="n">UINavigationControllerDelegate</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">imagePickerController</span><span class="p">(</span><span class="kc">_</span> <span class="n">picker</span><span class="p">:</span> <span class="n">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="n">info</span><span class="p">:</span> <span class="p">[</span><span class="n">UIImagePickerController</span><span class="p">.</span><span class="n">InfoKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//After photo picked, grap photo from infokeys</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image</span> <span class="p">=</span> <span class="n">info</span><span class="p">[</span><span class="n">UIImagePickerController</span><span class="p">.</span><span class="n">InfoKey</span><span class="p">.</span><span class="n">editedImage</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="n">UIImage</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">theImage</span> <span class="p">=</span> <span class="n">image</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">displayImageOnButton</span><span class="p">(</span><span class="n">theImage</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//display photo within button &#34;addPhoto&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">dismiss</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>All that&rsquo;s done here is taking the image from info keys, casting it as a UIIMage, and then passing that image to displayImageOnButton.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">displayImageOnButton</span><span class="p">(</span><span class="kc">_</span> <span class="n">image</span><span class="p">:</span> <span class="n">UIImage</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">addPhotoButton</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="k">for</span><span class="p">:</span> <span class="p">.</span><span class="n">normal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p>While this works, it seems a little chaotic. At some point I will refactor and clean some of this up but for now it&rsquo;s functional and works consistently. I&rsquo;d prefer to ENUM the source type for either .library or .camera and combine the two functions (to pick a photo) possibly into one.</p>
+<p>The delegate is also in prototype stage. I&rsquo;m thinking of creating a separate file to handle the dataManagement for the PostModel, in which case I&rsquo;ll call external functions within this delegate method to create a file path to the app bundle, generate a UUID for the photo, and finally upload that photo to fireBase without the need of saving it locally on device. Will need to check for errors in that path along the way to ensure a save was successful. To that point I should also add some error catches in this phase as well.</p>
+<hr>
+<h3 id="annotations">Annotations</h3>
+<p>Annotations are a pain. I haven&rsquo;t fully understood how to setup the view, but I&rsquo;m getting close.</p>
+<p>For this demo run, I used Apple&rsquo;s MapCallouts tutorial to help guide me. I created a TaggedLocationAnnotation and subclassed NSObject and MKAnnotation. I assigned a dummy coordinate and title within the annotation, and implement that within the MapViewController.</p>
+<p>I&rsquo;ve learned that the map annotations can be re-used similar to the tableview cells in a TableViewController. I extended the MapViewController class with MKMapViewDelegate, and also added a custom function per the tutorial I followed. In the <code>viewDidLoad</code>, I assigned the MapViewController as the delegate for MKMapView, registered the new TaggedLocationAnnontation, and then finally added the annotation to the mapView.</p>
+<p>Adding the mapView annotation calls the delegate methods below. Within that method, the added annotation is passed through and continues along to the setupTaggedLocationAnnotation function. This customizes the pin to be purple, animated, and when clicked upon uses a markerAnnotationView with an image to display the dummy picture I put in the app bundle.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Swift" data-lang="Swift"><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> - MapViewDelegate</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">MapViewController</span> <span class="p">:</span> <span class="n">MKMapViewDelegate</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//create custom pin type, showing image, distance from user, information button</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//when tapped, should open an info card with the image, the description, and the distance from the user?</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="n">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="n">annotation</span><span class="p">:</span> <span class="n">MKAnnotation</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">MKAnnotationView</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="o">!</span><span class="n">annotation</span><span class="p">.</span><span class="n">isKind</span><span class="p">(</span><span class="n">of</span><span class="p">:</span> <span class="n">MKUserLocation</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">annotationView</span><span class="p">:</span> <span class="n">MKAnnotationView</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">annotation</span> <span class="p">=</span> <span class="n">annotation</span> <span class="k">as</span><span class="p">?</span> <span class="n">TaggedLocationAnnotation</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">annotationView</span> <span class="p">=</span> <span class="n">setupTaggedLocationAnnotation</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">on</span><span class="p">:</span> <span class="n">mapView</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">annotationView</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//****************************</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">setupTaggedLocationAnnotation</span><span class="p">(</span><span class="k">for</span> <span class="n">annotation</span><span class="p">:</span> <span class="n">TaggedLocationAnnotation</span><span class="p">,</span> <span class="n">on</span> <span class="n">mapView</span><span class="p">:</span> <span class="n">MKMapView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">MKAnnotationView</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">identifier</span> <span class="p">=</span> <span class="n">NSStringFromClass</span><span class="p">(</span><span class="n">TaggedLocationAnnotation</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">view</span> <span class="p">=</span> <span class="n">mapView</span><span class="p">.</span><span class="n">dequeueReusableAnnotationView</span><span class="p">(</span><span class="n">withIdentifier</span><span class="p">:</span> <span class="n">identifier</span><span class="p">,</span> <span class="k">for</span><span class="p">:</span> <span class="n">annotation</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">markerAnnotationView</span> <span class="p">=</span> <span class="n">view</span> <span class="k">as</span><span class="p">?</span> <span class="n">MKMarkerAnnotationView</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">markerAnnotationView</span><span class="p">.</span><span class="n">animatesWhenAdded</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">            <span class="n">markerAnnotationView</span><span class="p">.</span><span class="n">canShowCallout</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">            <span class="n">markerAnnotationView</span><span class="p">.</span><span class="n">markerTintColor</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">purple</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// Provide an image view to use as the accessory view&#39;s detail view.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">pinImage</span> <span class="p">=</span> <span class="n">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&#34;trash_in_park.jpg&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">newPinImage</span> <span class="p">=</span> <span class="n">pinImage</span><span class="p">?.</span><span class="n">resized</span><span class="p">(</span><span class="n">withBounds</span><span class="p">:</span> <span class="n">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">markerAnnotationView</span><span class="p">.</span><span class="n">detailCalloutAccessoryView</span> <span class="p">=</span> <span class="n">UIImageView</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">newPinImage</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">view</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>So this is really ugly. The viewController is getting bloated and difficult to follow with all of the extensions. I&rsquo;m hoping to break out a new file that manages the views for the entire map, included the delegate methods. Not sure how that will go but will be a good learning point.</p>
+<p>Another major challenge will be structuring the data fetched from firebase, pulling that into some array, and then adding all of the locations around the user.</p>
+<figure><img src="/posts/papermod/images/TrashMapper/AnnotationPart6.gif">
+</figure>
+
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+  <small class="footer_copyright">
+    © 2025 Jacob Case. All rights reserved.
+  </small>
+</footer>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

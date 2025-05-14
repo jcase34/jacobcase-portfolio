@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CoreLocation on Jacob Case</title>
+    <link>http://localhost:1313/tags/corelocation/</link>
+    <description>Recent content in CoreLocation on Jacob Case</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/corelocation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part6</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Most of the work I&amp;rsquo;ve been putting into the app recently has been around Firebase and MKAnnotation views for the map.&lt;/p&gt;
+&lt;p&gt;Learning about Firebase has certainly been a process. Different stacks to choose from (i.e storage, realtime db, firestore), but feel like I&amp;rsquo;m closing in on a good solution. Will cover some of the topics today.&lt;/p&gt;
+&lt;p&gt;As for the MKAnnotations, I spent a few hours today playing around with different ways to display an annotation view, thinking about the best way to structure my annotations given my Firebase utility and so on.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part5</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Whew, what a day it has been! I spent a solid 5-6 hours reviewing the outline of this application. Flow, navigation, controller setup, all went through some more thought and comparison of projects online.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s go ahead and dive into some of the changes.&lt;/p&gt;
+&lt;p&gt;Also to note - I&amp;rsquo;m currently working from the develop branch of this project. I plan to create separate branches for camera functionality, firebase, and others moving forward.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part3</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;This post will be brief but cover some key points moving forward in this project.&lt;/p&gt;
+&lt;p&gt;From my previous post outlining some key steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates
+&lt;ul&gt;
+&lt;li&gt;Mostly complete, major functionality included&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration
+&lt;ul&gt;
+&lt;li&gt;Added, no analytics included for now. May integrate later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - Development - Part4</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</guid>
+      
+      <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Few more updates added&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates
+&lt;ul&gt;
+&lt;li&gt;Mostly complete, major functionality included&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration
+&lt;ul&gt;
+&lt;li&gt;Added, no analytics included for now. May integrate later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Apple Mapkit
+&lt;ul&gt;
+&lt;li&gt;Added to unique view controller with tab&lt;/li&gt;
+&lt;li&gt;Needs constraints on the view/tab&lt;/li&gt;
+&lt;li&gt;Added in get user location button
+&lt;ul&gt;
+&lt;li&gt;Function to zoom on user added&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add tableBar with tableView, MapView, userProfile buttons
+&lt;ul&gt;
+&lt;li&gt;In progress, two tab bars included&lt;/li&gt;
+&lt;li&gt;May not do the tableView for initial release&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add getUserLocation button
+&lt;ul&gt;
+&lt;li&gt;Tag location view added with basic information
+&lt;ul&gt;
+&lt;li&gt;Longitude&lt;/li&gt;
+&lt;li&gt;Latitude&lt;/li&gt;
+&lt;li&gt;Description&lt;/li&gt;
+&lt;li&gt;Button for Image Picker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add addPost button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;updates-to-views&#34;&gt;Updates to Views&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - CoreLocation - Part2</title>
+      <link>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</guid>
+      
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In the last post, I was able to tap a button on screen and begin collecting location data. I also had a stop button that would invoke &lt;code&gt;stopLocationManager()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Within this post I&amp;rsquo;ll cover updates to the &lt;code&gt;getLocation()&lt;/code&gt; method, merging of start/stop updating location button, and bounding how long we search for new locations based on some tools that Apple provides us.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;location-change--updating&#34;&gt;Location Change &amp;amp; Updating&lt;/h2&gt;
+&lt;p&gt;Here I show that the start and stop button merged into a single button. The title of the button updates as we begin searching for current location.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TrashMapper - iOS Project - CoreLocation - Part1</title>
+      <link>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</guid>
+      
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In my previous post I had created a list of to-do items. Normally you&amp;rsquo;d see these broken out in some Trello board. I may migrate to that once I make more headway but for now doing it in this fashion.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Outline functionality for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CLLocation Manager &amp;amp; related delegates &amp;mdash;&amp;ndash;&amp;gt; In progress&lt;/li&gt;
+&lt;li&gt;Camera usability, storing current photo&lt;/li&gt;
+&lt;li&gt;Paths to photos, storage URL, etc&lt;/li&gt;
+&lt;li&gt;userPost Object and related methods&lt;/li&gt;
+&lt;li&gt;userPost structs and definitions&lt;/li&gt;
+&lt;li&gt;Firebase cocoa pod integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build out the User Interface&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
