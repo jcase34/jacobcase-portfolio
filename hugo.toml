@@ -68,14 +68,9 @@ theme = "hugo-blog-awesome"
     url = '/posts/'
     weight = 20
   [[Languages.en-gb.menu.main]]
-    pageRef="resume"
-    name = 'Resume'
-    url = '/resume/'
-    weight = 30
-  [[Languages.en-gb.menu.main]]
-    pageRef="contact"
-    name = 'Contact'
-    url = '/contact/'
+    pageRef="about"
+    name = 'About'
+    url = '/about/'
     weight = 30
 
 [Languages.en-gb.params]
@@ -105,8 +100,8 @@ theme = "hugo-blog-awesome"
   avatar = "profile.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Jacob Case"
-  name = "Sidharth R"
-  description = "Software Engineer and Product Manager."
+  name = "Jacob Case"
+  description = "Software Engineer and Product Manager"
 
 # Allow to override webmanifest options
 [Languages.en-gb.params.webmanifest]
@@ -127,3 +122,4 @@ theme = "hugo-blog-awesome"
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/jcase34"
+hideFooter = true
