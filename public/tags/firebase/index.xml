@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 26 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TrashMapper - iOS Project - Development - Part4</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part4/</link>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part4/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;Few more updates added&amp;hellip;&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;updates-to-views&#34;&gt;Updates to Views&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/trashmapper-development-part4/28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     

@@ -233,7 +233,7 @@ stroke-linejoin="round" class="feather feather-home">
 <h3 id="uiviewcontrollers-to-static-uitableviewcontrollers">UIViewControllers to Static UITableViewControllers</h3>
 <p>Up first in the change list was the LocationDetailViewController. Initially this was a normal UIViewController. I had planned to add a button for the image capture, some labels, and a description field to capture text from the user.</p>
 <p>After doing some hunting online though I found that incorporating a UITableViewController would be easier to manage in terms of the visual view and information capture.</p>
-<p><img src="ViewsPart5.png" alt="map"></p>
+<p><img src="/posts/trashmapper-development-part5/ViewsPart5.png" alt="map"></p>
 <p>The user profile has still yet to be filled out, so only a placeholder for now.</p>
 <hr>
 <h3 id="load-and-zoom-to-user">Load and Zoom to user</h3>
@@ -258,7 +258,7 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span><span class="line"><span class="cl">   <span class="n">getLocation</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>I&rsquo;m leaving it as is for now because the simulator has some oddities when first establishing location.</p>
-<figure><img src="MapZoomPart5.gif">
+<figure><img src="/posts/trashmapper-development-part5/MapZoomPart5.gif">
 </figure>
 
 <hr>
@@ -266,7 +266,7 @@ stroke-linejoin="round" class="feather feather-home">
 <p>This is the final major edit to the project so far. I swapped the UIViewController out for a UITableViewController and assigned the table to static instead of dynamic.</p>
 <p>There is a way to keep the dynamic property set on the tablView, but do to the amount of time I struggled with this and functionality I need, static will do OK.</p>
 <p>I use the same &ldquo;Add Photo&rdquo; but this time in a tableViewCell, attaching constraints to the edges of the cell size. I also take advantage of the data labels assigned within the cells and use those to populate a dummy location of interest.</p>
-<figure><img src="TableViewPart5.png">
+<figure><img src="/posts/trashmapper-development-part5/TableViewPart5.png">
 </figure>
 
 <p>To populate the table view, I use a prepare segue that contains the location coordinates and pass those off to the LocationDetailViewController. The date parameter is created when called, and the description is just replaced with a dummy string.</p>
@@ -294,7 +294,7 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></div><h3 id="simulator">Simulator</h3>
-<figure><img src="AddLocationPart5.gif">
+<figure><img src="/posts/trashmapper-development-part5/AddLocationPart5.gif">
 </figure>
 
 

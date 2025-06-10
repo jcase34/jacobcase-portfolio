@@ -77,7 +77,6 @@ theme = "hugo-blog-awesome"
     name = 'Projects'
     url = '/projects/'
     weight = 30
-
 [Languages.en-gb.params]
   sitename = "Jacob Case"
   defaultColor = "dark" # set color mode: dark, light, auto

@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 13 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TrashMapper - iOS Project - Development - Part8</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part8/</link>
       <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part8/trashmapper-project-development-part8/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part8/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;In the last post, I mainly focused on the CreatePostViewController and made some minor tweaks to help user experience.&lt;/p&gt;
@@ -26,10 +26,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Development - Part9</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part9/</link>
       <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part9/trashmapper-project-development-part9/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part9/</guid>
       
       <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;In this post I want explore the option of using both CoreData and Firebase and performing a sync between them. Early in the brainstorming stages I brought up this topic but dismissed it due to some research around FireBase FireStore and ability to handle storing data offline and then syncing when service is available.&lt;/p&gt;
@@ -39,10 +39,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Development - Part7</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part7/trashmapper-project-development-part7/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part7/</link>
       <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part7/trashmapper-project-development-part7/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part7/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;Made some additional updates to the CreatePostViewController.&lt;/p&gt;
@@ -141,10 +141,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Development - Part6</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part6/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part6/trashmapper-project-development-part6/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part6/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;Most of the work I&amp;rsquo;ve been putting into the app recently has been around Firebase and MKAnnotation views for the map.&lt;/p&gt;
@@ -155,10 +155,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Development - Part5</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part5/</link>
       <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part5/trashmapper-project-development-part5/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part5/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;Whew, what a day it has been! I spent a solid 5-6 hours reviewing the outline of this application. Flow, navigation, controller setup, all went through some more thought and comparison of projects online.&lt;/p&gt;
@@ -169,10 +169,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Development - Part3</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part3/</link>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part3/trashmapper-project-development-part3/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part3/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;This post will be brief but cover some key points moving forward in this project.&lt;/p&gt;
@@ -204,10 +204,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Development - Part4</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part4/</link>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part4/trashmapper-project-development-part4/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part4/</guid>
       
       <description>&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
 &lt;p&gt;Few more updates added&amp;hellip;&lt;/p&gt;
@@ -268,16 +268,16 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;updates-to-views&#34;&gt;Updates to Views&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/trashmapper-development-part4/28May2022ViewFlow.png&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>TrashMapper - iOS Project - CoreLocation - Part2</title>
-      <link>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</link>
+      <link>http://localhost:1313/posts/trashmapper-development-part2/</link>
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-development-part2/trashmapper-project-development-part2/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-development-part2/</guid>
       
       <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;In the last post, I was able to tap a button on screen and begin collecting location data. I also had a stop button that would invoke &lt;code&gt;stopLocationManager()&lt;/code&gt;.&lt;/p&gt;
@@ -290,10 +290,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - CoreLocation - Part1</title>
-      <link>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</link>
+      <link>http://localhost:1313/posts/trashmapper-developmen-part1/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-developmen-part1/trashmapper-project-development-part1/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-developmen-part1/</guid>
       
       <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;In my previous post I had created a list of to-do items. Normally you&amp;rsquo;d see these broken out in some Trello board. I may migrate to that once I make more headway but for now doing it in this fashion.&lt;/p&gt;
@@ -328,10 +328,10 @@
     
     <item>
       <title>TrashMapper - iOS Project - Features</title>
-      <link>http://localhost:1313/posts/trashmapper-project-features/trashmapper-project-features/</link>
+      <link>http://localhost:1313/posts/trashmapper-project-features/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/trashmapper-project-features/trashmapper-project-features/</guid>
+      <guid>http://localhost:1313/posts/trashmapper-project-features/</guid>
       
       <description>&lt;p&gt;I had started learning from &lt;a href=&#34;https://www.hackingwithswift.com&#34;&gt;www.hackingwithswift.com&lt;/a&gt; back in February and made it about half way through the &amp;ldquo;100 Days of Swift&amp;rdquo;. One of the projects at that time required integrating Apple&amp;rsquo;s Mapkit and assigning info points on certain coordinates.&lt;/p&gt;
 &lt;p&gt;While completing that project I tried to think of applications that would be interesting to make outside of what&amp;rsquo;s available today. One that came to mind was tagging areas where there are large amounts of litter or garbage. A step further would be a crowd-sourced application where many people contribute to tagging locations on a map, coordinating clean-up groups, and even showing them on the map real-time.&lt;/p&gt;</description>
