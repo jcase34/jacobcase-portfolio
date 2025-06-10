@@ -8,7 +8,7 @@
     <language>en-gb</language>
     <lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/maaxboard/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MaaxBoard OSM93 Driver Monitoring &amp; Vehicle ECU Simulator</title>
+      <title>MaaxBoard OSM93 AI Driver Monitoring &amp; Vehicle ECU Simulator</title>
       <link>http://localhost:1313/projects/maaxboardosm93/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       
@@ -16,7 +16,7 @@
       
       <description>&lt;p&gt;&lt;img src=&#34;https://www.tria-technologies.com/wp-content/uploads/importedmedia/_Q5A4410_500x500.png&#34; alt=&#34;MaaxBoard Setup&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;This project involved building a complete demonstration platform for a Driver Monitoring System (DMS), vehicule ECU simulator, and demo application suite using the &lt;strong&gt;MaaxBoard OSM93 single board computer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This project involved building a complete demonstration platform for an AI Driver Monitoring System (DMS), vehicule ECU simulator, and demo application suite using the &lt;strong&gt;MaaxBoard OSM93 single board computer&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;The demo system showcased CAN bus communication, real-time data acquisition, and an interactive GUI developed using &lt;strong&gt;Python and Glade&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;It integrated NXP driver monitoring libraries, open-source pose detection and facial detection models, and served as an evaluation tool for customer and partner demos.&lt;/p&gt;</description>
       
