@@ -32,7 +32,7 @@ quickfacts:
     title: "Languages"
     value: |
       - 🇬🇧 English (native)
-      - 🇲🇽 Spanish (B1)🇪
+      - 🇲🇽 Spanish (B1)
   - icon: "heart"
     title: "Interests"
     value: |
