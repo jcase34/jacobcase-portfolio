@@ -33,10 +33,3 @@ name = "Engineering"
 url = "/engineering/"
 weight = 50
 pre = "engineering"
-
-[[main]]
-name = "Contributions"
-url = "/contributions/"
-weight = 51
-pre = "contributions"
-

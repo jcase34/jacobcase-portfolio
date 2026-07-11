@@ -9,3 +9,12 @@ tensacon:
   src: /images/companies/tensacon.png
 sirve-engineering:
   src: /images/companies/sirve-engineering.png
+
+seagate:
+  src: /images/companies/seagate.png
+biora:
+  src: /images/companies/biora.png
+tria:
+  src: /images/companies/Tria.png
+
+

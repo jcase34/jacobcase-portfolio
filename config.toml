@@ -32,7 +32,7 @@ defaultContentLanguageInSubdir = false
 name = "Jacob Case"
 firstName = "Jacob"
 lastName = "Case"
-email = "mail@felipecordero.com"
+email = ""
 profile_image = "/images/profile.jpg"
 author = "Jacob"
 
@@ -45,10 +45,8 @@ linkedin_text = "linkedin.com/in/jacob-case"
 github_url = "https://github.com/jcase34"
 github_text = "github.com/jcase34"
 
-calendly_url = "https://calendly.com/correofelipecordero/30min"
-calendly_height = "700px"
 
-copyright = "Felipe Cordero"
+copyright = "Jacob Case"
 
 
 resume_url_en = "/files/Felipe_Cordero_CV_ENG.pdf"
