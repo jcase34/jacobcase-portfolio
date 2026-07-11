@@ -20,7 +20,7 @@ positions:
       - "Led technical initiatives tied to product and business goals, including innovation documentation for investment conversations exceeding $500K USD."
 
   - company: "Biora"
-    company_url: "https://www.bioratherapeutics.com/
+    company_url: "https://www.bioratherapeutics.com/"
     role: "Engineering Manager / Associate Director Device Development"
     period: "March 2019 - October 2021"
     industry: "Medical Device"
