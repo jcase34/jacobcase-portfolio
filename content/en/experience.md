@@ -9,18 +9,18 @@ resume_downloads:
     label: English
 
 positions:
-  - company: "Tria"
+  - company: "Tria Technologies"
     company_url: "https://www.tria-technologies.com/"
     role: "Program Manager"
     period: "March 2022 - Present"
-    industry: "Technology design company for embedded compute"
+    industry: "Embedded Compute Design"
     location: "Remote"
     company_description: "Embedded compute design company"
     bullet_points:
       - "Led technical initiatives tied to product and business goals, including innovation documentation for investment conversations exceeding $500K USD."
-      - "Promoted from Senior Solutions Engineer to Program Manager in Business Development"
+      - "Promoted from Senior Solutions Engineer to Program Manager supporintg buinsess development"
 
-  - company: "Biora"
+  - company: "Biora Therapeutics"
     company_url: "https://www.bioratherapeutics.com/"
     role: "Associate Director Device Development"
     period: "March 2019 - October 2021"
@@ -31,7 +31,7 @@ positions:
       - "Managed 6 direct reports. Cross functional lead for clinical, engineering, and others to lead a clinical in-vivo study evaluating peformance and accuracy of smart drug delivery capsule, DDS2."
       - "Promoted from Device Engineering Manager"
 
-  - company: "Seagate"
+  - company: "Seagate Technologies"
     company_url: "https://www.seagate.com/"
     role: "Senior Electrical Engineer"
     period: "June 2012 - November 2018"
