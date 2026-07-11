@@ -1,11 +1,12 @@
 # Keys must match urlize(company) from experience front matter, or use company_key on a position.
 # Each `src` is a URL path; use .svg, .png, or .webp under static/images/companies/.
 # If there is no entry here, all images in static/images/companies/<key>/ are shown (e.g. various-engineering-firms/).
-seagate:
-  src: /images/companies/seagate.png
-biora:
-  src: /images/companies/biora.png
 tria:
   src: /images/companies/tria.png
+biora:
+  src: /images/companies/biora.png
+seagate:
+  src: /images/companies/seagate.png
+
 
 
