@@ -43,7 +43,10 @@ description = "Full-stack AI product engineer at Fireraven. Building guardrails,
 linkedin_url = "https://www.linkedin.com/in/jacob-case"
 linkedin_text = "linkedin.com/in/jacob-case"
 github_url = "https://github.com/jcase34"
-github_text = "github.com/jcase34"\
+github_text = "github.com/jcase34"
+
+calendly_url = "https://calendly.com/correofelipecordero/30min"
+calendly_height = "700px"
 
 copyright = "Felipe Cordero"
 
