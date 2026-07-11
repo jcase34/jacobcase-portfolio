@@ -1,7 +1,7 @@
 ---
 title: "About"
 type: "homepage"
-featured_image: "/images/felipe-cordero-profile.jpeg"
+featured_image: "/images/profile.jpeg"
 intro: >-
   **Technical product engineer in AI**—turning security, compliance, and product goals into shipped software for LLM agents. I started in **structural engineering** in Chile, moved into **software and automation** in construction and BIM, then into **AI/ML and LLM-based products**. Today I'm a **full-stack AI product engineer** at <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, focused on AI agent security and compliance: scoping with product and customers, designing policies and guardrails, and shipping APIs and UIs teams rely on—not a generic backend role. I've led complex, cross-disciplinary work from R&D through delivery, including the **Academic Excellence Scholarship** (Air Canada, Collège LaSalle Montréal, 2025) for AI/ML studies.
 
@@ -21,29 +21,25 @@ personal: >-
 quickfacts:
   - icon: "briefcase"
     title: "Current Role"
-    value: "Full-Stack AI Product Engineer at <a href=\"https://fireraven.ai\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Fireraven</strong></a>"
+    value: "Program Manager at Tria Technologies
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://uchile.cl/\" target=\"_blank\" rel=\"noopener noreferrer\">University of Chile</a>, **Bachelor's Degree in Civil Engineering**<br>🤖 <a href=\"https://lasallecollege.lcieducation.com/en\" target=\"_blank\" rel=\"noopener noreferrer\">Collège LaSalle Montréal</a>, **AEC: Artificial Intelligence and Machine Learning**"
+    value: "🏗️ <a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering**<br>
   - icon: "award"
     title: "Recent Achievement"
     value: "🏆 Recipient of the <a href=\"/blog/academic-excellence-recognition/\" target=\"_blank\" rel=\"noopener\">Academic Excellence Scholarship</a> 🎓 sponsored by ✈️ Air Canada at Collège LaSalle Montréal (2025) 🎉"
   - icon: "language"
     title: "Languages"
     value: |
-      - 🇬🇧 English (IELTS C1)
-      - 🇨🇱 Spanish (Native)
-      - 🇫🇷 French (TCF B2)
+      - 🇬🇧 English (native)
+      - 🇲🇽 Spanish (B1)🇪
   - icon: "heart"
     title: "Interests"
     value: |
-      - ♟️ Chess
-      - 🎾 Tennis
-      - 🚴 Cycling
-      - 🏊‍♂️ Swimming
-      - 👨‍🍳 Cooking
-      - 🥁 Drumming
-      - 📸 Photography
+      - 🏀 Basketball
+      - ⚽️ Soccer
+      - 🏈 Football
       - ✈️ Traveling
-      - 📚 Reading
+      - 🎹 Piano
+      - 
 ---

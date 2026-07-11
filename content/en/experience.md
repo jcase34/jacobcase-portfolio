@@ -9,7 +9,7 @@ resume_downloads:
     label: English
 
 positions:
-  - company: "Tria Technologies"
+  - company: "Tria Technologies (Avnet Company)"
     company_url: "https://www.tria-technologies.com/"
     role: "Program Manager"
     period: "March 2022 - Present"
