@@ -24,10 +24,10 @@ quickfacts:
     value: "Program Manager at Tria Technologies"
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering"
+    value: "🏗️ <a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering**"
   - icon: "award"
     title: "Recent Achievement"
-    value: "🏆 Recipient of the <a href=\"/blog/academic-excellence-recognition/\" target=\"_blank\" rel=\"noopener\">Academic Excellence Scholarship</a> 🎓 sponsored by ✈️ Air Canada at Collège LaSalle Montréal (2025) 🎉"
+    value: "Secured design win worth $1,500,000"
   - icon: "language"
     title: "Languages"
     value: |
