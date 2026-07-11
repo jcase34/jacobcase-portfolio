@@ -1,0 +1,206 @@
+# Hugo Site Configuration
+baseURL = "https://jacob-case.com/"
+languageCode = "en-us"
+title = "Jacob Case"
+theme = "careercanvas"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      tagline = "Full-stack AI product engineer at Fireraven. Guardrails, compliance, and secure LLM agents."
+      hero_description = "Full-stack AI product engineer at Fireraven, where we help enterprises deploy LLM agents with security, auditing, and policy-driven controls—from no-code guardrails to runtime enforcement and red-teaming. I bridge product priorities with AI systems engineering so customers can adopt agents safely and at scale."
+      hero_location = "Montréal, Canada"
+      resume_url = "/files/Felipe_Cordero_CV_ENG.pdf"
+      collab_tags = [
+        "AI agent security & compliance",
+        "Guardrails & policy design",
+        "Full-stack AI (Python / Next.js)",
+        "Product-engineering & requirements",
+        "Enterprise AI adoption"
+      ]
+  [languages.es]
+    contentDir = "content/es"
+    languageName = "Español"
+    weight = 2
+    [languages.es.params]
+      tagline = "Ingeniero de producto IA full stack en Fireraven. Guardrails, cumplimiento y agentes LLM seguros."
+      hero_description = "Ingeniero de producto IA full stack en Fireraven: ayudamos a las empresas a desplegar agentes LLM con seguridad, auditoría y controles basados en políticas—desde guardrails sin código hasta enforcement en tiempo de ejecución y red teaming. Conecto prioridades de producto con ingeniería de sistemas de IA para una adopción segura y a escala."
+      hero_location = "Montreal, Canadá"
+      resume_url = "/files/Felipe_Cordero_CV_ENG.pdf"
+      collab_tags = [
+        "Seguridad y cumplimiento de agentes IA",
+        "Guardrails y diseño de políticas",
+        "IA full stack (Python / Next.js)",
+        "Ingeniería de producto y requisitos",
+        "Adopción de IA empresarial"
+      ]
+  [languages.fr]
+    contentDir = "content/fr"
+    languageName = "Français"
+    weight = 3
+    [languages.fr.params]
+      tagline = "Ingénieur produit IA full stack chez Fireraven. Guardrails, conformité et agents LLM sécurisés."
+      hero_description = "Ingénieur produit IA full stack chez Fireraven : nous aidons les entreprises à déployer des agents LLM avec sécurité, audit et contrôles pilotés par les politiques—des guardrails no-code à l'exécution en runtime et au red teaming. Je relie les priorités produit à l'ingénierie des systèmes IA pour une adoption sûre et à l'échelle."
+      hero_location = "Montréal, Canada"
+      resume_url = "/files/Felipe_Cordero_CV_FRE.pdf"
+      collab_tags = [
+        "Sécurité et conformité des agents IA",
+        "Guardrails et conception de politiques",
+        "IA full stack (Python / Next.js)",
+        "Ingénierie produit et exigences",
+        "Adoption de l'IA en entreprise"
+      ]
+
+[build]
+  writeStats = true
+
+[params]
+name = "Felipe Cordero"
+firstName = "Felipe"
+lastName = "Cordero"
+email = "mail@felipecordero.com"
+profile_image = "/images/felipe-cordero-profile.jpg"
+author = "Felipe Cordero"
+
+og_image = "images/felipecordero-og.png"
+
+description = "Full-stack AI product engineer at Fireraven. Building guardrails, security, and compliance tooling for LLM agents—bridging product vision with AI systems engineering."
+
+linkedin_url = "https://www.linkedin.com/in/felipe-cordero-osorio"
+linkedin_text = "linkedin.com/in/felipe-cordero-osorio"
+github_url = "https://github.com/felipecordero"
+github_text = "github.com/felipecordero"
+
+calendly_url = "https://calendly.com/correofelipecordero/30min"
+calendly_height = "700px"
+
+copyright = "Felipe Cordero"
+
+
+resume_url_en = "/files/Felipe_Cordero_CV_ENG.pdf"
+resume_url_fr = "/files/Felipe_Cordero_CV_FRE.pdf"
+resume_label = "View CV"
+
+# Form and Pexels: set in config or config.local.toml. CI: HUGO_PARAMS_FORMSPREEENDPOINT, HUGO_PARAMS_PEXELSAPIKEY (no underscores)
+formspreeendpoint = ""
+pexelsapikey = ""
+
+[[params.social]]
+icon = "linkedin-in"
+url = "https://www.linkedin.com/in/felipe-cordero-osorio/"
+
+[[params.social]]
+icon = "github"
+url = "https://github.com/felipecordero"
+
+sectionPagesMenu = 'main'
+
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[server]
+  [[server.headers]]
+    for = "/**/*.css"
+    [server.headers.values]
+      Content-Type = "text/css"
+
+# Dynamic Color Palettes Configuration
+# Multiple color palettes that will be randomly selected on each page load
+# Each palette contains main_color, second_color, and third_color
+[params.color_palettes]
+  [[params.color_palettes.palette]]
+    name = "professional"
+    main_color = "#474A51"    # Graphite Gray – ultra professional, metallic, predominant
+    second_color = "#E52521"  # Mario Red – subtle accent, inspired by Super Mario
+    third_color = "#3CB043"   # Luigi Green – subtle accent, inspired by Luigi
+  
+  [[params.color_palettes.palette]]
+    name = "ocean"
+    main_color = "#1E40AF"    # Vibrant Blue – energetic and modern
+    second_color = "#06B6D4"  # Cyan – fresh and innovative
+    third_color = "#10B981"   # Emerald – growth and success
+  
+  # [[params.color_palettes.palette]]
+  #   name = "sunset"
+  #   main_color = "#DC2626"    # Vibrant Red – warm and energetic
+  #   second_color = "#F59E0B"  # Amber – optimistic and bright
+  #   third_color = "#EF4444"   # Red Orange – passion and creativity
+  # 
+  # [[params.color_palettes.palette]]
+  #   name = "forest"
+  #   main_color = "#059669"    # Deep Emerald – natural and stable
+  #   second_color = "#10B981"  # Green – growth and success
+  #   third_color = "#F59E0B"   # Golden Yellow – wisdom and clarity
+  # 
+  # [[params.color_palettes.palette]]
+  #   name = "fire"
+  #   main_color = "#EA580C"    # Orange – creativity and enthusiasm
+  #   second_color = "#DC2626"  # Red – passion and energy
+  #   third_color = "#F59E0B"   # Amber – warmth and optimism
+  
+  [[params.color_palettes.palette]]
+    name = "steel"
+    main_color = "#374151"    # Steel Gray – industrial and reliable
+    second_color = "#6B7280"  # Medium Gray – balanced and professional
+    third_color = "#10B981"   # Emerald – success and precision
+  
+  [[params.color_palettes.palette]]
+    name = "navy"
+    main_color = "#1E3A8A"    # Navy Blue – authoritative and trustworthy
+    second_color = "#3B82F6"  # Bright Blue – innovation and clarity
+    third_color = "#F59E0B"   # Amber – excellence and achievement
+  
+  # [[params.color_palettes.palette]]
+  #   name = "charcoal"
+  #   main_color = "#1F2937"    # Charcoal – sophisticated and modern
+  #   second_color = "#EF4444"  # Red – energy and determination
+  #   third_color = "#22C55E"   # Green – growth and stability
+  
+  [[params.color_palettes.palette]]
+    name = "slate"
+    main_color = "#475569"    # Slate Blue – professional and calm
+    second_color = "#0EA5E9"  # Sky Blue – clear thinking and progress
+    third_color = "#F97316"   # Orange – creativity and innovation
+  
+  [[params.color_palettes.palette]]
+    name = "midnight"
+    main_color = "#0F172A"    # Midnight Blue – deep and authoritative
+    second_color = "#8B5CF6"  # Purple – innovation and technology
+    third_color = "#06B6D4"   # Cyan – precision and clarity
+  
+
+
+
+
+# Pexels hero backgrounds (queries only; API key in params above)
+[params.pexels]
+  # Image search queries for random background images
+  # Customize this list to change the types of images that appear
+  # The system will randomly select from these queries for each page loads
+  queries = [
+    # "galaxy", "nebula", "planet", "astronomy",
+    # "solar system", "black hole", "constellation", "meteor",
+    # "comet", "asteroid", "space station", "satellite",
+    # "structural long span bridges", "structural skycrapers", "astronomy nasa pictures",
+    # "universe nasa pictures",
+    "long span bridges",
+    "skyscrapers",
+    # "the universe galaxies",
+    "sky and clouds",
+    "galactic core"
+    # "nebula nasa pictures",
+    # "artificial intelligence",
+  ]
