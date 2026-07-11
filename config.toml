@@ -40,13 +40,10 @@ og_image = ""
 
 description = "Full-stack AI product engineer at Fireraven. Building guardrails, security, and compliance tooling for LLM agents—bridging product vision with AI systems engineering."
 
-linkedin_url = "https://www.linkedin.com/in/felipe-cordero-osorio"
-linkedin_text = "linkedin.com/in/felipe-cordero-osorio"
-github_url = "https://github.com/felipecordero"
-github_text = "github.com/felipecordero"
-
-calendly_url = "https://calendly.com/correofelipecordero/30min"
-calendly_height = "700px"
+linkedin_url = "https://www.linkedin.com/in/jacob-case"
+linkedin_text = "linkedin.com/in/jacob-case"
+github_url = "https://github.com/jcase34"
+github_text = "github.com/jcase34"\
 
 copyright = "Felipe Cordero"
 
