@@ -31,7 +31,8 @@ positions:
 
   - company: "Seagate"
     company_url: "https://www.seagate.com/"
-    role: "Electrical Engineer - New product development"
+    role: "Senior Electrical Engineer"
+    role: "Electrical Engineer 2"
     period: "June 2012 - November 2018"
     industry: "Computer storage"
     location: "Colorado"
