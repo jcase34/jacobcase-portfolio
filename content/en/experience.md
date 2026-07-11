@@ -41,6 +41,4 @@ positions:
     bullet_points:
       - "Lead electrical engineer for enterprise HDD products, successfully designed, tested, and deployed 6 unique electrical designs, sel"
       - "Lead electrical engineer for enterprise HDD products, successfully designed, tested, and deployed 6 unique electrical designs, sel"
-  
-
 ---
