@@ -49,8 +49,7 @@ github_text = "github.com/jcase34"
 copyright = "Jacob Case"
 
 
-resume_url_en = "/files/Felipe_Cordero_CV_ENG.pdf"
-resume_url_fr = "/files/Felipe_Cordero_CV_FRE.pdf"
+resume_url_en = ""
 resume_label = "View CV"
 
 # Form and Pexels: set in config or config.local.toml. CI: HUGO_PARAMS_FORMSPREEENDPOINT, HUGO_PARAMS_PEXELSAPIKEY (no underscores)
@@ -59,11 +58,11 @@ pexelsapikey = ""
 
 [[params.social]]
 icon = "linkedin-in"
-url = "https://www.linkedin.com/in/felipe-cordero-osorio/"
+url = "https://www.linkedin.com/in/jacob-case/"
 
 [[params.social]]
 icon = "github"
-url = "https://github.com/felipecordero"
+url = "https://github.com/jcase34"
 
 sectionPagesMenu = 'main'
 
