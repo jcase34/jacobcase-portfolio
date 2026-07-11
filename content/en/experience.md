@@ -18,6 +18,7 @@ positions:
     company_description: "Embedded compute design company"
     bullet_points:
       - "Led technical initiatives tied to product and business goals, including innovation documentation for investment conversations exceeding $500K USD."
+      - "Managed 6 direct reports. Cross functional lead for clinical, eng"
 
   - company: "Biora Therapeutics"
     company_url: "https://www.bioratherapeutics.com/
@@ -27,7 +28,8 @@ positions:
     location: "California"
     company_description: "Medical device start-up, focused on development of novel, Class III, smart drug delivery devices."
     bullet_points:
-      - "Managed 6 direct reports. Cross functional lead for clinical, engineering, and others to lead a clinical in-vivo study evaluating peformance and accuracy of smart drug delivery capsule, DDS2."
+      - "Managed 6 direct reports. Cross functional lead for clinical, eng"
+      - "Managed 6 direct reports. Cross functional lead for clinical, eng"
 
   - company: "Seagate Technologies"
     company_url: "https://www.seagate.com/"
@@ -37,7 +39,8 @@ positions:
     location: "Colorado"
     company_description: "Tech company focused on creating next generation of HDD storage."
     bullet_points:
-      - "Lead electrical engineer for enterprise HDD products, successfully designed, tested, and deployed 6 unique electrical designs, selling total of xxx / year"
+      - "Lead electrical engineer for enterprise HDD products, successfully designed, tested, and deployed 6 unique electrical designs, sel"
+      - "Lead electrical engineer for enterprise HDD products, successfully designed, tested, and deployed 6 unique electrical designs, sel"
   
 
 ---
