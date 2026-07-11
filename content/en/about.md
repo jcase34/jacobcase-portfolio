@@ -21,10 +21,10 @@ personal: >-
 quickfacts:
   - icon: "briefcase"
     title: "Current Role"
-    value: "Program Manager at Tria Technologies
+    value: "Program Manager at Tria Technologies"
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering**<br>🤖 <a href=\"https://lasallecollege.lcieducation.com/en\" target=\"_blank\" rel=\"noopener noreferrer\">Collège LaSalle Montréal</a>, **AEC: Artificial Intelligence and Machine Learning**"
+    value: "🏗️ <a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering"
   - icon: "award"
     title: "Recent Achievement"
     value: "🏆 Recipient of the <a href=\"/blog/academic-excellence-recognition/\" target=\"_blank\" rel=\"noopener\">Academic Excellence Scholarship</a> 🎓 sponsored by ✈️ Air Canada at Collège LaSalle Montréal (2025) 🎉"
