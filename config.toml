@@ -30,8 +30,8 @@ defaultContentLanguageInSubdir = false
 
 [params]
 name = "Jacob Case"
-firstName = "Felipe"
-lastName = "Cordero"
+firstName = "Jacob"
+lastName = "Case
 email = "mail@felipecordero.com"
 profile_image = "/images/profile.jpg"
 author = "Jacob Case"
@@ -48,7 +48,7 @@ github_text = "github.com/felipecordero"
 calendly_url = "https://calendly.com/correofelipecordero/30min"
 calendly_height = "700px"
 
-copyright = "Felipe Cordero"
+copyright = "Jacob Case"
 
 
 resume_url_en = "/files/Felipe_Cordero_CV_ENG.pdf"
