@@ -12,8 +12,8 @@ defaultContentLanguageInSubdir = false
     languageName = "English"
     weight = 1
     [languages.en.params]
-      tagline = "Full-stack AI product engineer at Fireraven. Guardrails, compliance, and secure LLM agents."
-      hero_description = "Full-stack AI product engineer at Fireraven, where we help enterprises deploy LLM agents with security, auditing, and policy-driven controls—from no-code guardrails to runtime enforcement and red-teaming. I bridge product priorities with AI systems engineering so customers can adopt agents safely and at scale."
+      tagline = "Embedded hardware, software, and cloud connectivity. AWS, embedded Linux, web and iOS development."
+      hero_description = "Program manager at Tria technologies, where we help businesses integrate embedded system-on-modules, customized software and BSPs, and system solutions for performant and edge IOT compute. I bridge product development with customer needs to ensure reliable and scalable growth."
       hero_location = "San Diego, CA"
       resume_url = ""
       collab_tags = [
