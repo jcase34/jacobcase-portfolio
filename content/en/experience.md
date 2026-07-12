@@ -37,7 +37,7 @@ positions:
     period: "June 2012 - November 2018"
     industry: "Computer storage / data infrastructure"
     location: "Colorado"
-    company_description: "Global leader in data storage technology, designing and manufacturing enterprise and consumer hard disk drives (HDDs) and storage solutions.
+    company_description: "Global leader in data storage technology, designing and manufacturing enterprise and consumer hard disk drives (HDDs) and storage solutions."
     bullet_points:
       - "Lead electrical engineer for enterprise HDD products, successfully designed, tested, and deployed 6 unique electrical designs, selling total of xxx / year"
       - "Multiple promotions from EE1, EE2 to senior electrical engineer"
