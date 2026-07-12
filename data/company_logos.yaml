@@ -2,7 +2,9 @@
 # Each `src` is a URL path; use .svg, .png, or .webp under static/images/companies/.
 # If there is no entry here, all images in static/images/companies/<key>/ are shown (e.g. various-engineering-firms/).
 tria-technologies:
-  src: /images/companies/tria.png
+  src: /images/companies/tria-technologies.png
+independent-developer:
+  src: /images/companies/independent-developer.png
 biora-therapeutics:
   src: /images/companies/biora.png
 seagate-technologies:

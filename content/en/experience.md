@@ -9,13 +9,13 @@ resume_downloads:
     label: English
 
 positions:
-  - company: "Tria Technologies (Avnet Company)"
+  - company: "Tria Technologies"
     company_url: "https://www.tria-technologies.com/"
     role: "Program Manager"
     period: "March 2022 - Present"
     industry: "Embedded Computing / OEM Hardware Design"
     location: "Remote"
-    company_description: "Embedded compute design and manufacturing company (formerly Avnet Embedded/MSC Technologies), delivering compute modules and custom systems for OEMs across medical, industrial, and consumer applications."
+    company_description: "Tria Technologies (Avnet Compnay). Embedded compute design and manufacturing company (formerly Avnet Embedded/MSC Technologies), delivering compute modules and custom systems for OEMs across medical, industrial, and consumer applications."
     bullet_points:
       - "Led technical initiatives tied to product and business goals, including innovation documentation for investment conversations exceeding $500K USD."
       - "Promoted from Senior Solutions Engineer to Program Manager supporintg buinsess development"
