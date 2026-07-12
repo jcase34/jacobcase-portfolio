@@ -3,10 +3,10 @@ title: "About"
 type: "homepage"
 featured_image: "/images/profile.jpeg"
 intro: >-
-  **Seeking a technical product manager role. With over a decade experience in embedded electronics, software, and leadership I want to help business expand and grow their product offerings. I started in **electrical engineering** at Seagate in Colorado, moved into **medical device design and development* within a start-up in San Diego, CA, then into **solutions engineering and program management**. Today I'm a **program manager supporting business development** at Tria Technologies (Avnet Company), focused helping customers find embedded compute solutions for the next generation products: scoping out product requirememts, mapping out product roadmaps, managing key factory and partner relationships, and managing hardware and software deployment. I've led complex, cross-disciplinary work from R&D through delivery, working with marketing, clinical, supplier partners, drug manufacturers, and overseas manufacturing to deliver products from 0 -> 1.
+  Seeking a technical product manager role. With over a decade experience in embedded electronics, software, and leadership I want to help business expand and grow their product offerings. I started in **electrical engineering** at Seagate in Colorado, then moved into **medical device design and development** within a start-up in San Diego, CA. Today I'm a **program manager supporting business development** at Tria Technologies (Avnet Company), focused on helping customers find embedded compute solutions for the next generation products. This includes: scoping out product requirememts, mapping out product roadmaps and timelines, managing key factory and partner relationships, and managing hardware and software deployment domestically and overseas. I've led complex, cross-disciplinary work from R&D through delivery, working with marketing, clinical, supplier partners, drug manufacturers, and overseas manufacturing to deliver products from 0 -> 1 across multiple domains.
 
 study: >-
-  Based in **Montréal**, I continue to deepen **AI and machine learning** at **Collège LaSalle** (Python, PyTorch, predictive modeling), complementing my day-to-day work on **LLM agents, guardrails, and product delivery** at Fireraven.
+  Based in **San Diego, CA**, I continue to deepen my experience with **data engineering and optimizing logistics** on my own time, complementing my day-to-day work as a **program manager** at Tria.
 
 passion_title: "What I focus on"
 passion_text: >-
