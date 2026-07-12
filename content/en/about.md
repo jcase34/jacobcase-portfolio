@@ -6,17 +6,15 @@ intro: >-
   Seeking a technical product manager role. With over a decade experience in embedded electronics, software, and leadership I want to help business expand and grow their product offerings. I started in **electrical engineering** at Seagate in Colorado, then moved into **medical device design and development** within a start-up in San Diego, CA. Today I'm a **program manager supporting business development** at Tria Technologies (Avnet Company), focused on helping customers find embedded compute solutions for the next generation products. This includes: scoping out product requirememts, mapping out product roadmaps and timelines, managing key factory and partner relationships, and managing hardware and software deployment domestically and overseas. I've led complex, cross-disciplinary work from R&D through delivery, working with marketing, clinical, supplier partners, drug manufacturers, and overseas manufacturing to deliver products from 0 -> 1 across multiple domains.
 
 study: >-
-  Based in **San Diego, CA**, I continue to deepen my experience with **data engineering and optimizing logistics** on my own time, complementing my day-to-day work as a **program manager** at Tria.
+  Based in **San Diego, CA**, I continue to deepen my experience in **data engineering and logistics optimization** on my own time, complementing my day-to-day work as a **program manager** at Tria.
 
-passion_title: "What I focus on"
+passion_title: ""
 passion_text: >-
-  I work as a **product-engineer** where I bridge **product vision** with **AI systems engineering**. I design and implement **AI-focused features** that balance security, compliance, and user experience—helping organizations adopt **LLM agents** in a way that is **secure, auditable, and aligned with business goals**. At <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, that means collaborating with product, security, and customers on guardrails, policies, and runtime controls, and building with **Python (FastAPI)**, **Next.js/TypeScript**, and **PostgreSQL** in agile, distributed teams. Previously at <a href="https://obralink.com" target="_blank" rel="noopener noreferrer"><strong>ObraLink</strong></a>, I led **autonomous structural analysis** and **ML** for concrete estimation—translating engineering needs into shipped product.
 
 mix: >-
-  My path from **structural engineering** to **AI product engineering** means I connect **disciplined systems thinking** with **software delivery**: from physical structures and BIM to **policy-driven AI** and enterprise tooling. I focus on **practical outcomes**—clear requirements, measurable impact, and reliable systems.
 
 personal: >-
-  Outside work, I enjoy **tennis**, **cooking**, **drums**, **swimming**, and **photography**. I **volunteer at LaSalle College**, helping new students settle in and supporting the academic community.
+  Outside work, I enjoy sports, playing piano, language learning, traveling, and exploring different places and cultures. 
 
 quickfacts:
   - icon: "briefcase"
