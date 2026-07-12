@@ -20,6 +20,19 @@ positions:
       - "Led technical initiatives tied to product and business goals, including innovation documentation for investment conversations exceeding $500K USD."
       - "Promoted from Senior Solutions Engineer to Program Manager supporintg buinsess development"
 
+  - company: "Independent Developer"
+    company_url: ""
+    role: "iOS, Full Stack Development, Student"
+    period: "Jan 2021 - March 2022"
+    industry: "Mobile & Full Stack Applications"
+    location: "Remote"
+    company_description: "Self-taught full-stack iOS development and FastAPI backend framework. Student in Coursera."
+    bullet_points:
+      - "Developed two POC mobile (iOS) applications using a mixture of technologies including GCP, CoreData, Figman, AutoLayout, UI-Charts, and others."
+      - "Released Cappriccio to the iOS App Store; beta tested among several different people including family / friends to get an idea on functionality and user feedback"
+      - "resolved bugs in the UI" 
+      - "incorporated features based on Nike Fitness application"
+
   - company: "Biora Therapeutics"
     company_url: "https://www.bioratherapeutics.com/"
     role: "Associate Director Device Development"
