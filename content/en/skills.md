@@ -20,9 +20,9 @@ domains:
     description: "Requirements discovery, risk framing, security controls, auditability, and working with regulatory and compliance constraints—turning them into prioritized roadmaps and shipped features."
     devicon_class: "devicon-react-original colored"
 
-  - icon: "tools"
-    title: "Structural Engineering & AEC"
-    description: "Deep background in structural design, BIM, and construction technology—grounding product decisions in how complex physical and organizational systems actually behave."
+  - icon: "circuits"
+    title: "Electrical Engineering & Design"
+    description: "Deep background in electronics design, power electronics, multi-layer PCB/PCBA design and manufacturing and system design and testing across consumer electronics and combination device drug medical products."
     devicon_class: "devicon-docker-plain colored"
 
   - icon: "users"
@@ -32,11 +32,7 @@ domains:
 
   - icon: "globe"
     title: "Languages & International Experience"
-    description: "Native Spanish; English (IELTS C1) and French (TCF B2) for international product and customer contexts."
+    description: "Native English; Spanish (B1) via Mexico City to support future product development with customers in central America."
     devicon_class: "devicon-html5-plain colored"
 
-  - icon: "hands-helping"
-    title: "Community & Learning"
-    description: "Volunteer work and continuous learning, including the Academic Excellence Scholarship at Collège LaSalle Montréal."
-    devicon_class: "devicon-javascript-plain colored"
 ---
