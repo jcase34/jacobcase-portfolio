@@ -15,12 +15,12 @@ domains:
     description: "Python, FastAPI, Next.js/TypeScript, agents and RAG patterns, PostgreSQL and Supabase, testing, observability, GCP and modern deployment—an integrated toolkit for shipping reliable features."
     devicon_class: "devicon-python-plain colored"
 
-  - icon: "data"
+  - icon: "database"
     title: "Product & Security Thinking"
     description: "Requirements discovery, risk framing, security controls, auditability, and working with regulatory and compliance constraints—turning them into prioritized roadmaps and shipped features."
     devicon_class: "devicon-react-original colored"
 
-  - icon: "circuit"
+  - icon: "microchip"
     title: "Electrical Engineering & Design"
     description: "Deep background in electrical engineering, power electronics, multi-layer PCB/PCBA design, overseas mass production with facbricators and CMs, and system design and test."
     devicon_class: "devicon-docker-plain colored"
