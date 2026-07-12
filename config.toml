@@ -17,11 +17,11 @@ defaultContentLanguageInSubdir = false
       hero_location = "San Diego, CA"
       resume_url = ""
       collab_tags = [
-        "AI agent security & compliance",
-        "Guardrails & policy design",
-        "Full-stack AI (Python / Next.js)",
+        "Embedded Hardware & Software",
+        "Product Management",
+        "Full-stack (Python / Next.js)",
         "Product-engineering & requirements",
-        "Enterprise AI adoption"
+        "Cloud Connectivity & Data Engineering"
       ]
 
 

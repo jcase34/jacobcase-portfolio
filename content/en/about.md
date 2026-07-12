@@ -24,7 +24,7 @@ quickfacts:
     value: "Program Manager at Tria Technologies"
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering**"
+    value: "<a href=\"https://www.mines.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Colorado School of Mines</a>, **Bachelor's Degree in Electrical Engineering**"
   - icon: "award"
     title: "Recent Achievement"
     value: "Secured design win worth $1,500,000"
