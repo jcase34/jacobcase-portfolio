@@ -123,6 +123,7 @@ technical_groups:
       - icon: "aws"
         name: "AWS"
         devicon_name: "amazonwebservices"
+        devicon_style: "original-wordmark"
       - icon: "cloud"
         name: "GCP"
         devicon_name: "googlecloud"
@@ -149,7 +150,9 @@ technical_groups:
         devicon_name: "firebase"
       - icon: "apple"
         name: "CoreData"
-
+        devicon_name: "apple"
+        devicon_style: "original"
+        
   - title: "Electronics Design (EDA)"
     icon: "microchip"
     color_scheme: "red"
