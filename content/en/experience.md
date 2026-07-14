@@ -47,6 +47,7 @@ positions:
   - company: "Seagate Technologies"
     company_url: "https://www.seagate.com/"
     role: "Senior Electrical Engineer"
+    role: "Senior Electrical Engineer2"
     period: "June 2012 - November 2018"
     industry: "Computer storage / data infrastructure"
     location: "Colorado"

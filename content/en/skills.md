@@ -12,7 +12,7 @@ domains:
 
   - icon: "code"
     title: "Full-Stack & Embedded Linux"
-    description: "Python, FastAPI, and Next.js for full-stack web delivery; embedded Linux for device-level software; PostgreSQL for data persistence; and AWS/GCP for modern, reliable deployment pipelines."
+    description: "Python, FastAPI, and Next.js for full-stack web delivery; embedded Linux for device-level software; PostgreSQL for data persistence; and AWS/GCP for modern, reliable and scalable services."
     devicon_class: "devicon-python-plain colored"
 
   - icon: "database"
