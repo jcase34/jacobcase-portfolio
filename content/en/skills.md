@@ -23,7 +23,7 @@ domains:
   - icon: "apple"
     title: "iOS Mobile Application Development"
     description: ""
-    devicon_class: "devicon-apple-colored"
+    devicon_class: "devicon-apple"
 
   - icon: "microchip"
     title: "Electrical Engineering & Design"
