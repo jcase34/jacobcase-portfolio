@@ -2,7 +2,7 @@
 title: "Skills"
 type: "homepage"
 intro: >-
-  Product-engineering for AI agents: LLM security and compliance design, full-stack delivery, and clear collaboration across product, security, and customers.
+  Product manager bridging engineering, leadership, and customer needs—scoping requirements, prioritizing roadmaps, and driving cross-functional teams from discovery to shipped product.
 
 domains:
   - icon: "brain"
