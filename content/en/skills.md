@@ -7,18 +7,23 @@ intro: >-
 domains:
   - icon: "brain"
     title: "Product Engineering & Management"
-    description: "LLM agents, prompt and policy design, guardrails, runtime enforcement, red-teaming mindset, AI security, compliance-oriented product design, and scoping with PMs and customers."
+    description: "Identifying real problems, researching existing solutions, and leading cross functional teams to develop products to address challenges."
     devicon_class: "devicon-tensorflow-original colored"
 
   - icon: "code"
-    title: "Full-Stack AI Engineering"
-    description: "Python, FastAPI, Next.js/TypeScript, agents and RAG patterns, PostgreSQL and Supabase, testing, observability, GCP and modern deployment—an integrated toolkit for shipping reliable features."
+    title: "Full-Stack & Embedded Linux"
+    description: "Python, FastAPI, Next.js, embedded Linux, PostgreSQL, AWS / GCP, and modern deployment for shipping reliable features."
     devicon_class: "devicon-python-plain colored"
 
   - icon: "database"
-    title: "Product & Security Thinking"
+    title: "Embedded Linux"
     description: "Requirements discovery, risk framing, security controls, auditability, and working with regulatory and compliance constraints—turning them into prioritized roadmaps and shipped features."
     devicon_class: "devicon-react-original colored"
+
+  - icon: "apple"
+    title: "iOS Mobile Application Development"
+    description: ""
+    devicon_class: "devicon-apple-colored
 
   - icon: "microchip"
     title: "Electrical Engineering & Design"
@@ -32,7 +37,7 @@ domains:
 
   - icon: "globe"
     title: "Languages & International Experience"
-    description: "Native English; Spanish (B1) via Mexico City to support future product development with customers in central America."
+    description: "Native English; Spanish (B1) via **Learn Spanish in Mexico City School** to support future product development with customers in central America as long term career goal."
     devicon_class: "devicon-html5-plain colored"
 
 ---
