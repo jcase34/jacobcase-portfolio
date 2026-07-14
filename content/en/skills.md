@@ -20,7 +20,7 @@ domains:
     description: "Requirements discovery, risk framing, security controls, auditability, and working with regulatory and compliance constraints—turning them into prioritized roadmaps and shipped features."
     devicon_class: "devicon-react-original colored"
 
-  - icon: "apple"
+  - icon: "mobile-screen-button"
     title: "iOS Mobile Application Development"
     description: ""
     devicon_class: "devicon-apple"
