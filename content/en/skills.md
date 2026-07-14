@@ -12,17 +12,17 @@ domains:
 
   - icon: "code"
     title: "Full-Stack & Embedded Linux"
-    description: "Python, FastAPI, Next.js, embedded Linux, PostgreSQL, AWS / GCP, and modern deployment for shipping reliable features."
+    description: "Python, FastAPI, and Next.js for full-stack web delivery; embedded Linux for device-level software; PostgreSQL for data persistence; and AWS/GCP for modern, reliable deployment pipelines."
     devicon_class: "devicon-python-plain colored"
 
   - icon: "database"
-    title: "Embedded Linux"
-    description: "Requirements discovery, risk framing, security controls, auditability, and working with regulatory and compliance constraints—turning them into prioritized roadmaps and shipped features."
+    title: "Data & Systems Integration"
+    description: "Designing data flows and integration points across embedded devices, cloud services, and applications—connecting hardware telemetry to usable, structured data downstream."
     devicon_class: "devicon-react-original colored"
 
   - icon: "mobile-screen-button"
     title: "iOS Mobile Application Development"
-    description: ""
+    description: "Swift development for iOS, including UI/UX implementation, CoreData persistence, and end-to-end app lifecycle from prototyping to App Store deployment. Experienced with Firebase, authentication, delegation, UI charting, and MapKit."
     devicon_class: "devicon-apple"
 
   - icon: "microchip"
@@ -37,7 +37,7 @@ domains:
 
   - icon: "globe"
     title: "Languages & International Experience"
-    description: "Native English; Spanish (B1) via **Learn Spanish in Mexico City School** to support future product development with customers in central America as long term career goal."
+    description: "Native English speaker; conversational Spanish (B1), studied through an immersion program in Mexico City—supporting a long-term goal of building products for customers across Central America."
     devicon_class: "devicon-html5-plain colored"
 
 ---
