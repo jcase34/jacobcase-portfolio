@@ -1,7 +1,7 @@
 ---
 title: "MaaxBoard OSM93 AI Driver Monitoring & Vehicle ECU Simulator"
 description: "An integrated AI driver monitoring system demo developed on the MaaxBoard OSM93 platform, combining CAN interface, NXP libraries, and a Python-Glade graphical UI."
-featured_image: "/images/ecu-demo.gif"
+featured_image: "/images/album_maaxboard/ecu-concept.png"
 tags: ["Embedded Linux", "Edge IoT", "CAN-bus", "Machine Learning", "UI Design"]
 ---
 
