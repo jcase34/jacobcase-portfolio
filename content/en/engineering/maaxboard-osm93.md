@@ -2,15 +2,7 @@
 title: "MaaxBoard OSM93 AI Driver Monitoring & Vehicle ECU Simulator"
 date: "2024-07-12"
 description: "An integrated AI driver monitoring system demo developed on the MaaxBoard OSM93 platform, combining CAN interface, NXP libraries, and a Python-Glade graphical UI."
-tags:
-  - Embedded Systems
-  - CAN Bus
-  - Python
-  - GUI
-  - Driver Monitoring
-  - MaaxBoard
-  - NXP
-ShowToc: true
+tags: ["Embedded Linux", "Edge IoT", "CAN-bus", "Machine Learning", "UI Design"]
 ---
 
 ![MaaxBoard Setup](https://www.tria-technologies.com/wp-content/uploads/importedmedia/_Q5A4410_500x500.png)
