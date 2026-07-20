@@ -1,19 +1,19 @@
 ---
-title: "Hard Drive Disc Controller Board Design"
-description: ""
+title: "Hard Drive Disk Controller Board Design"
+description: "Electrical design and validation of the controller board for enterprise HDD products, from schematic through mass production."
 featured_image: "/images/album_seagate/tatsu-hdd.png"
-tags: ["Electronics", "MentorGraphics", "Simulation", "PCBA", "sap2000", "opensees"]
+tags: ["Electronics", "PCB Design", "PCBA", "Mentor Graphics", "Signal Integrity"]
 ---
 
-With a solid background in **electrical engineer`ing**, I am qualified to tackle the design of residential, industrial, and infrastructure projects. Efficiency, professionalism, and quality in the development of models guarantee reliable results for the dimensioning and **detailed engineering** phase.
+With a background in electrical engineering focused on enterprise storage, I led the design, validation, and testing of controller boards for next-generation hard disk drives — from schematic capture through multi-layer PCB layout, prototyping, and mass production with overseas contract manufacturers.
 
 ### Tools I Use
 
 - LTSpice
-- MentorGraphics
-- DSA / Oscilloscopes 
+- Mentor Graphics
+- DSA / Oscilloscopes
 - Network Analyzers
-- JEDEC DRAM Timing Analyzers
+- Power / Signal Integrity Analysis
 
 ### Gallery
 
