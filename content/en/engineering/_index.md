@@ -1,23 +1,23 @@
 +++
-title = "Structural Engineering"
-description = "Explore my structural engineering tools and solutions for modern construction challenges."
+title = "Embedded, software, iOS Engineering"
+description = ""
 type = "list"
 # menu = "main"
 weight = 50
 +++
 
-## Structural Engineering Tools & Solutions
+## Engineering Projects - Concept -> Fully Shipped
 
-Here you'll find a collection of tools and solutions I've developed to tackle complex structural challenges in today's construction industry.
+Here you'll find a collection of shipped projects and products I've worked on, spanning across embedded hardware, software, and iOS applications. 
 
 ### What You'll Find Here
 
-- **Automated Design Tools**: Streamlined calculators for common structural problems
-- **Real-Time Monitoring Solutions**: Systems that provide live structural insights during construction
-- **BIM Integration Tools**: Software that bridges the gap between design and construction
-- **Interactive Visualizations**: Web-based tools for better understanding of structural behavior
+- **Hard Disc Drive Controllers**: Streamlined calculators for common structural problems
+- **Therapeutic & Diagnostics Class III Medical Devices**: Overview of two medical device designs I contributed to both from an engineering and leadership position.
+- **IOS Applications**: Proof of concept and shipped applications designed to help users track and monitor waste in their community, and piano practice regimens. 
+- **Edge IOT, ML, and Embedded Linux Applications**: Full-stack applications designed on embedded IOT hardware, demonstrating machine learning, edge connected, and real time applications.
 
-Each tool represents my commitment to making complex engineering concepts more accessible and practical for real-world applications.
+
 
 ---
 
