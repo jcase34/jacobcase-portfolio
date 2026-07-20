@@ -1,21 +1,21 @@
 +++
 title = "Engineering Projects"
-description = ""
+description = "Shipped hardware, embedded software, and iOS applications spanning enterprise storage, medical devices, and connected systems."
 type = "list"
 # menu = "main"
 weight = 50
 +++
 
-## Engineering Projects - Concept -> Fully Shipped
+## From Concept to Shipped Product
 
 Here you'll find a collection of shipped projects and products I've worked on, spanning across embedded hardware, software, and iOS applications. 
 
 ### What You'll Find Here
 
-- **Hard Disc Drive Controllers**: Streamlined calculators for common structural problems
-- **Therapeutic & Diagnostics Class III Medical Devices**: Overview of two medical device designs I contributed to both from an engineering and leadership position.
-- **IOS Applications**: Proof of concept and shipped applications designed to help users track and monitor waste in their community, and piano practice regimens. 
-- **Edge IOT, ML, and Embedded Linux Applications**: Full-stack applications designed on embedded IOT hardware, demonstrating machine learning, edge connected, and real time applications.
+- **Hard Disk Drive Controllers**: Electrical design and validation work on enterprise HDD products, from schematic capture through mass production.
+- **Class III Medical Devices**: Overview of two therapeutic and diagnostic device programs I contributed to, from both an engineering and leadership role.
+- **iOS Applications**: Proof-of-concept and shipped apps designed to help users track community waste and manage piano practice regimens.
+- **Edge IoT, ML & Embedded Linux**: Full-stack applications built on embedded IoT hardware, demonstrating machine learning, edge connectivity, and real-time processing.
 
 
 
