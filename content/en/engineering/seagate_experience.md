@@ -1,7 +1,7 @@
 ---
 title: "Hard Drive Disc Controller Board Design"
 description: ""
-featured_image: "/images/album_seagate/tatsu_hdd.png"
+featured_image: "/images/album_seagate/tatsu-hdd.png"
 tags: ["Electronics", "MentorGraphics", "Simulation", "PCBA", "sap2000", "opensees"]
 ---
 
