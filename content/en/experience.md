@@ -28,10 +28,9 @@ positions:
     location: "Remote"
     company_description: "Self-taught full-stack iOS development and FastAPI backend framework. Student in Coursera."
     bullet_points:
-      - "Developed two POC mobile (iOS) applications using a mixture of technologies including GCP, CoreData, Figman, AutoLayout, UI-Charts, and others."
-      - "Released Cappriccio to the iOS App Store; beta tested among several different people including family / friends to get an idea on functionality and user feedback"
-      - "resolved bugs in the UI" 
-      - "incorporated features based on Nike Fitness application"
+      - "Completed self-directed coursework in iOS development (Udemy), backend/cloud architecture (AWS, GCP), and algorithms & data structures (Stanford, via Coursera)."
+      - "Built and shipped Cappriccio, a piano practice tracking app, from concept through App Store release.  implemented local data storage (CoreData) and activity visualization (ChartsUI), validating design with a 10-user beta before public launch."
+      - "Designed and built TrashMapper, a crowdsourced waste-tracking app concept — implemented user management, live cloud data sync, and photo-based reporting from wireframe through functional prototype (unpublished)." 
 
   - company: "Biora Therapeutics"
     company_url: "https://www.bioratherapeutics.com/"
@@ -41,11 +40,12 @@ positions:
     location: "California"
     company_description: "Clinical-stage biopharmaceutical company (formerly Progenity) developing novel oral and ingestible drug delivery platforms, including smart capsule technology for needle-free biologic delivery."
     bullet_points:
-      - "Managed DDS2 program "
-      - "Managed SCBDS program "
-      - "Performed board and software architecture for hardware automation test suite, setup, logging, using PySimpleGUI, logging, PyTest, etc"
-      
-      - "Promoted from Device Engineering Manager, assigned 5 direct reports "
+      - "Promoted to Associate Director, Device Development, leading a 6-person team across 2 capsule programs, owning requirements, feature definition, manufacturing, and test strategy."
+      - "Led a 6 week live imaging study validating capsule 'localization' technology to target specific intestinal regions for drug deployment, achieving an 86% success rate."
+      - "Created a 4 month software feature and test roadmap for a diagnostic capsule ahead of a preclinical animal study, running bi-weekly sprints with a contracted SW team; roadmap greenlit proof-of-function studies and improved build reliability 15% by adding manufacturing checks for LEDs, board communication, motor control, and wireless function."
+      - "Designed a new test fixture for semi-rigid flex boards, cutting test time 80% and improving end-product reliability 90%; scoped SOW and partnered with external CM to execute mechanical design."
+      - "Brought all electrical design, testing, and supplier management in-house from third-party CMs, saving $10K/month plus overhead, while owning all design files and supplier PCB and PCBA relationships."
+      - "Led cross-functional dry run of capsule production (clinical, firmware, clean-room, third-party manufacturing), successfully building 25/30 units despite high manufacturing complexity; results informed a critical go/no-go decision on proof-of-function for the end product."
 
   - company: "Seagate Technologies"
     company_url: "https://www.seagate.com/"
