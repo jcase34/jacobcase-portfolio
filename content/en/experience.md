@@ -41,8 +41,11 @@ positions:
     location: "California"
     company_description: "Clinical-stage biopharmaceutical company (formerly Progenity) developing novel oral and ingestible drug delivery platforms, including smart capsule technology for needle-free biologic delivery."
     bullet_points:
-      - "Managed 6 direct reports. Cross functional lead for clinical, engineering, and others to lead a clinical in-vivo study evaluating peformance and accuracy of smart drug delivery capsule, DDS2."
-      - "Promoted from Device Engineering Manager"
+      - "Managed DDS2 program "
+      - "Managed SCBDS program "
+      - "Performed board and software architecture for hardware automation test suite, setup, logging, using PySimpleGUI, logging, PyTest, etc"
+      
+      - "Promoted from Device Engineering Manager, assigned 5 direct reports "
 
   - company: "Seagate Technologies"
     company_url: "https://www.seagate.com/"
@@ -52,8 +55,8 @@ positions:
     location: "Colorado"
     company_description: "Global leader in data storage technology, designing and manufacturing enterprise and consumer hard disk drives (HDDs) and storage solutions."
     bullet_points:
-      - "Lead electrical engineer for enterprise HDD controller systems, performing simulation, schematic capture, board layout, board bring-up, system testing and end product evaluation."
-      - "Led designs from prototype to full production for 6 HDD platforms, selling 1-2 million units per quarter."
-      - "Worked cross functionally with core, firmware, mechanical, reliability, product, and overseas mass production manufacturing teams."
-      - "Multiple promotions from EE1, EE2 to senior electrical engineer"
+      - "Owned electrical design integration for six high-speed HDD controller boards, from prototype through mass production shipping 1-3M units/quarter."
+      - "Led 6-layer miniaturized HDI design enabling HDD platter expansion for Seagate's critical 12TB helium drive program; miniaturization approach was later leveraged into 2-3 downstream products."
+      - "Flagged a 13% prototype defect rate as a production-scale risk, leading root-cause investigation with FPGA, SoC, firmware, and supplier FAE teams to implement screening and prevention in mass production."
+      - "Promoted from Electrical Engineer I to Senior Electrical Engineer over 6 years at Seagate, taking on increasing ownership of controller board integration for high-volume HDD programs."
 ---
