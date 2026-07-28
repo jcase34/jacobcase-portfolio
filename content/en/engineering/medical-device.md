@@ -5,7 +5,18 @@ featured_image: "/images/album_progenity/dds2_capsule.png"
 tags: ["Medical Device", "Altium", "IAR Embedded", "C", "Python", "Product Management"]
 ---
 
-#### This program allows accurate analysis of sections of composite walls of any geometry, based on current regulations (DS 60). The following are determined:
+#### Biomedical Start-up Focused on Smart Capsule Technology Targeting GI Health
+
+Two capsule programs being developed at an early stage start-up. 
+- DDS
+    - Targeted drug delivery system comprised of electromechanical components and small molecule drug compound. 
+{{< iframe id="seagate_map" src="/images/album_progenity/dds.jpeg" >}}
+
+- SCBDS
+    - Targeted sampling and on-board bacteria assay analysis components, tethered to a wireless adapter for real time logging and data capture. 
+{{< iframe id="seagate_map" src="/images/album_progenity/scbds.png" >}}
+
+### Tools Used
 
 - Altium Designer (Schematic capture, BOM, board layout, manufacturing files)
 - STM32 Low Power 
@@ -13,9 +24,10 @@ tags: ["Medical Device", "Altium", "IAR Embedded", "C", "Python", "Product Manag
 - Testing & Automation
 - Miniaturized semi-rigid flex designs
 - PCB and assembly house supplier management for medical devices ISO 13485
-- Manage technical & requirements documentation
+- Jira / Confluence / Master Control 
+    - Manage technical & requirements documentation
     - User needs, stakeholder requirements, design inputs, system requirements
-    - Hardware requirements
+    - Hardware requirements 
 
 ### Gallery
 
