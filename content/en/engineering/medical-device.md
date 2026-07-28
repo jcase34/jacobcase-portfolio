@@ -1,7 +1,7 @@
 ---
 title: "Class III Medical Devices"
 description: "Therapeutic and Diagnostic smart capsuels at start up company"
-featured_image: "/images/album_sections/demo.png"
+featured_image: "/images/album_progenity/dds2_capsule.png"
 tags: ["Medical Device", "Altium", "IAR Embedded", "C", "Python", "Product Management"]
 ---
 
@@ -19,4 +19,4 @@ tags: ["Medical Device", "Altium", "IAR Embedded", "C", "Python", "Product Manag
 
 ### Gallery
 
-{{< gallery dir="images/album_sections" >}}
+{{< gallery dir="images/album_progenity" >}}
