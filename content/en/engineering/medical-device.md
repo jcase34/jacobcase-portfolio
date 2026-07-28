@@ -13,6 +13,9 @@ tags: ["Medical Device", "Altium", "IAR Embedded", "C", "Python", "Product Manag
 - Testing & Automation
 - Miniaturized semi-rigid flex designs
 - PCB and assembly house supplier management for medical devices ISO 13485
+- Manage technical & requirements documentation
+    - User needs, stakeholder requirements, design inputs, system requirements
+    - Hardware requirements
 
 ### Gallery
 
