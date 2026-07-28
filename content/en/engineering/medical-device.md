@@ -1,5 +1,5 @@
 ---
-title: "Class III Medical Devices"
+title: "Class III Smart Capsule Medical Devices"
 description: "Therapeutic and Diagnostic smart capsuels at start up company"
 featured_image: "/images/album_progenity/dds2_capsule.png"
 tags: ["Medical Device", "Altium", "IAR Embedded", "C", "Python", "Product Management"]
@@ -11,7 +11,6 @@ Two capsule programs being developed at an early stage start-up.
 - DDS
     - Targeted drug delivery system comprised of electromechanical components and small molecule drug compound. 
 {{< iframe id="seagate_map" src="/images/album_progenity/dds.jpeg" >}}
-
 - SCBDS
     - Targeted sampling and on-board bacteria assay analysis components, tethered to a wireless adapter for real time logging and data capture. 
 {{< iframe id="seagate_map" src="/images/album_progenity/scbds.png" >}}
