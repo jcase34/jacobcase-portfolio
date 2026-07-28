@@ -15,7 +15,7 @@ With a background in electrical engineering focused on enterprise storage, I led
 - Network Analyzers
 - Power / Signal Integrity Analysis
 
-{{< iframe id="seagate-cm-map" src="/album_seagate/seagate-map.html" >}}
+{{< iframe id="seagate-cm-map" src="/album_seagate/seagate_map.html" >}}
 
 ### Gallery
 
