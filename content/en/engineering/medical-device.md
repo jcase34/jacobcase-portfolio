@@ -13,6 +13,8 @@ Two capsule programs being developed at an early stage start-up.
 - SCBDS
     - Targeted sampling and on-board bacteria assay analysis components, tethered to a wireless adapter for real time logging and data capture. 
 
+{{< youtube "eDkndrxQCgc" >}}
+
 ### Tools Used
 
 - Altium Designer (Schematic capture, BOM, board layout, manufacturing files)
