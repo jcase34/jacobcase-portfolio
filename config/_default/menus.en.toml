@@ -23,10 +23,6 @@ name = "Tech Stack"
 url = "/#technical"
 weight = 4.5
 
-[[main]]
-name = "Blog"
-url = "/blog/"
-weight = 60
 
 [[main]]
 name = "Engineering"
