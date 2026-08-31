@@ -25,6 +25,8 @@ To design a highly modular, scalable, and visually compelling demonstration suit
 - Demonstrating use of various interfaces: MIPI Display, CAN interface, USB Camera
 - Interactive UI to allow customers and FAE to exercise multiple demos on a single platform
 
+{{< iframe id="seagate_map" src="/images/album_maaxboard/ecu-concept.png" >}}
+
 ---
 
 ## Design
@@ -76,7 +78,7 @@ The demo suite provided engineers and partners with a ready-to-use interactive p
 
 - Demo suite showing three separate software applications: AI Driver Monitoring System, AI Fitness Trainer, and a simulated vehicle ECU engine.
 
-![dms](/images/album_maaxboard/dms-system.png)
+{{< iframe id="seagate_map" src="/images/album_maaxboard/dms-system.png" >}}
 
 - Above is an AI driver monitoring system that relies on open-source pose and facial detection models to monitor driver attention using head, face, and eye detection.
 
