@@ -13,7 +13,9 @@ This project involved building a complete demonstration platform for an AI Drive
 
 The demo system showcased CAN bus communication, real-time data acquisition, and an interactive GUI developed using **Python and Glade**.
 
-It integrated NXP driver monitoring libraries, open-source pose detection and facial detection models, and served as an evaluation tool for customer and partner demos.
+It integrated NXP driver monitoring libraries, open-source pose detection and facial detection models, and served as an evaluation tool for customer and partner demos. See github link:
+
+{{< github url="https://github.com/Avnet/Maaxboard-OSM93-Demos" >}}
 
 ---
 
@@ -26,7 +28,6 @@ To design a highly modular, scalable, and visually compelling demonstration suit
 - Interactive UI to allow customers and FAE to exercise multiple demos on a single platform
 
 {{< iframe id="seagate_map" src="/images/album_maaxboard/ecu-concept.png" >}}
-
 ---
 
 ## Design
