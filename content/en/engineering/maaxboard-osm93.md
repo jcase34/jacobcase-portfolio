@@ -25,7 +25,7 @@ To design a highly modular, scalable, and visually compelling demonstration suit
 - Demonstrating use of various interfaces: MIPI Display, CAN interface, USB Camera
 - Interactive UI to allow customers and FAE to exercise multiple demos on a single platform
 
-{{< iframe id="seagate_map" src="/images/album_maaxboard/ecu-concept.png" >}}
+{{< iframe id="ecu-concept" src="/images/album_maaxboard/ecu-concept.png" >}}
 ---
 
 ## Design
@@ -35,8 +35,6 @@ To design a highly modular, scalable, and visually compelling demonstration suit
 - MaaxBoard OSM93 SBC with OSM93 integrated SOM
 - CAN transceiver hardware
 - Powerbank to provide power to the OBDII module & MaaXBoard OSM93
-
-![ecu-concept](ecu-concept.png)
 
 **Software Layer:**
 
