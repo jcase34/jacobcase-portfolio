@@ -5,7 +5,7 @@ featured_image: "/images/album_maaxboard/ecu-concept.png"
 tags: ["Embedded Linux", "Edge IoT", "CAN-bus", "Machine Learning", "UI Design"]
 ---
 
-![MaaxBoard Setup](ecu-concept.png)
+![MaaxBoard Setup](https://www.tria-technologies.com/wp-content/uploads/importedmedia/_Q5A4410_500x500.png)
 
 ## Overview
 
@@ -76,7 +76,7 @@ The demo suite provided engineers and partners with a ready-to-use interactive p
 
 - Demo suite showing three separate software applications: AI Driver Monitoring System, AI Fitness Trainer, and a simulated vehicle ECU engine.
 
-![dms](dms-system.png)
+![dms](/images/album_maaxboard/dms-system.png)
 
 - Above is an AI driver monitoring system that relies on open-source pose and facial detection models to monitor driver attention using head, face, and eye detection.
 
