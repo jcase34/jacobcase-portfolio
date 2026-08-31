@@ -27,7 +27,7 @@ quickfacts:
   - icon: "language"
     title: "Languages"
     value: |
-      - 🇬🇧 English (native)
+      - 🇺🇸 English (native)
       - 🇲🇽 Spanish (B1)
   - icon: "heart"
     title: "Interests"
