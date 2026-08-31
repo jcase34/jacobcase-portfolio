@@ -80,7 +80,7 @@ The demo suite provided engineers and partners with a ready-to-use interactive p
 
 - Above is an AI driver monitoring system that relies on open-source pose and facial detection models to monitor driver attention using head, face, and eye detection.
 
-![Python-Glade GUI](ecu-demo.gif)
+![Python-Glade GUI](/images/album_maaxboard/ecu-demo.gif)
 
 In the GIF above, the MaaXBoard OSM93 is acting as a vehicle ECU.
 
