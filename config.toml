@@ -12,7 +12,7 @@ defaultContentLanguageInSubdir = false
     languageName = "English"
     weight = 1
     [languages.en.params]
-      tagline = "Seeking product manager role. Experience with full-stack mobile and web, cloud connectivity, data engineering, and embedded hardware."
+      tagline = "Experience with full-stack mobile and web, cloud connectivity, data engineering, and embedded hardware."
       hero_description = "Program manager at Tria technologies, where we help businesses integrate embedded system-on-modules, customized software and BSPs, and system solutions for performant and edge IOT compute. I bridge product development with customer needs to ensure reliable and scalable growth."
       hero_location = "San Diego, CA"
       resume_url = ""
